@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grab_app/ass_module/challenges_screen.dart';
+import 'package:grab_app/ass_module/express_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'food_screen.dart';
@@ -440,7 +441,11 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               InkWell(
                 onTap: () {
-                  print("images/Express.png");
+                                    Navigator.of(context).push(
+                    CupertinoPageRoute(
+                      builder: (context) => ExpressScreen(),
+                    ),
+                  );
                 },
                 child: Column(
                   children: [
