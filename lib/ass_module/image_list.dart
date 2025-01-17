@@ -236,7 +236,7 @@ List<Map<String, dynamic>> imageListfoodvertical = [
         {'image': 'SP.jpg', 'name': 'Raw Shrimp Papaya Salad','price':'12000'},
         {'image': 'FR.jpg', 'name': 'Seafood Fried Rice ','price':'12000'},
         {'image': 'FN.jpg', 'name': 'Fried Noodle with Beef and Egg','price':'12000'},
-        {'image': 'BF.jpg', 'name': 'Beef Fried Rice p','price':'12000'},
+        {'image': 'BF.jpg', 'name': 'Beef Fried Rice ','price':'12000'},
         {'image': 'BNS.jpg', 'name': 'Beef Ball Rice Noodle Soup','price':'12000'},
       ],
   },
