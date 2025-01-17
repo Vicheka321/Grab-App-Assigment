@@ -108,44 +108,42 @@ List<Map<String, String>> imageListGridkeepDiscovering = [
   },
 ];
 
-List<Map<String, String>> imageListfood = [
-  {
-    'image': 'images/food1.jpg',
-    'text': 'អាម៉ុក',
-    'distance': '15 mins 0.6 km',
-  },
-  {
-    'image': 'images/food2.jpg',
-    'text': 'ត្រីអាំងអំពិលទំ',
-    'distance': '20 mins 1.2 km',
-  },
-  {
-    'image': 'images/food3.jpg',
-    'text': 'ម្ជូរគ្រឿងសាច់គោ',
-    'distance': '10 mins 0.5 km',
-  },
-  {
-    'image': 'images/food4.jpg',
-    'text': 'ប្រហុកអាំងជ្រុញ',
-    'distance': '25 mins 2.0 km',
-  },
-  {
-    'image': 'images/food5.jpg',
-    'text': 'ឆាសៀង',
-    'distance': '18 mins 0.8 km',
-  },
-  {
-    'image': 'images/food6.jpg',
-    'text': 'ស្ងោម្រះ',
-    'distance': '30 mins 3.0 km',
-  },
-];
+// List<Map<String, String>> imageListfood = [
+//   {
+//     'image': 'images/food1.jpg',
+//     'text': 'អាម៉ុក',
+//     'distance': '15 mins 0.6 km',
+//   },
+//   {
+//     'image': 'images/food2.jpg',
+//     'text': 'ត្រីអាំងអំពិលទំ',
+//     'distance': '20 mins 1.2 km',
+//   },
+//   {
+//     'image': 'images/food3.jpg',
+//     'text': 'ម្ជូរគ្រឿងសាច់គោ',
+//     'distance': '10 mins 0.5 km',
+//   },
+//   {
+//     'image': 'images/food4.jpg',
+//     'text': 'ប្រហុកអាំងជ្រុញ',
+//     'distance': '25 mins 2.0 km',
+//   },
+//   {
+//     'image': 'images/food5.jpg',
+//     'text': 'ឆាសៀង',
+//     'distance': '18 mins 0.8 km',
+//   },
+//   {
+//     'image': 'images/food6.jpg',
+//     'text': 'ស្ងោម្រះ',
+//     'distance': '30 mins 3.0 km',
+//   },
+// ];
 
 List<Map<String, dynamic>> imageListfoodvertical = [
-
-
   {
-    'image': 'images/BF.jpg',
+    'image': 'images/food2.jpg',
     'text': 'Amazone Cafe',
     'rateandtype': '⭐ 4.7 Cafe | កាហ្វេ',
     'delivery': 'Free Delivery',
@@ -161,8 +159,6 @@ List<Map<String, dynamic>> imageListfoodvertical = [
       {'image': 'images/food1.jpg', 'name': 'Amok Dish', 'price': '15 \$'},
     ],
   },
-
-  
   {
     'image': 'images/food2.jpg',
     'text': 'ត្រីអាំងអំពិលទំ',
@@ -212,7 +208,7 @@ List<Map<String, dynamic>> imageListfoodvertical = [
     ],
   },
   {
-    'image': 'images/food6.jpg',
+    'image': 'images/food/papayalogo.jpg',
     'text': 'ស្ងោម្រះ',
     'rateandtype': '⭐ 4.9 Food | អាហារ',
     'delivery': 'Free Delivery',
@@ -223,21 +219,28 @@ List<Map<String, dynamic>> imageListfoodvertical = [
       {'image': 'images/food1.jpg', 'name': 'Amok Dish', 'price': '10000'},
     ],
   },
-
-  
-    {
-    'image': 'pagayalogo.jpg',
-    'text': 'ស្រី​ អនបុងល្ហុងឆ្ងាញ់ពេញចិត្ត',
-    'rateandtype': '⭐️ 4.6 Food | អាហារ',
-    'delivery': 'Free Delivery',
-    'distance': 'From 30 mins',
-    'relatedImages': [
-        {'image': 'PN.jpg', 'name': 'Papaya Noodle','price':'12000'},
-        {'image': 'SP.jpg', 'name': 'Raw Shrimp Papaya Salad','price':'12000'},
-        {'image': 'FR.jpg', 'name': 'Seafood Fried Rice ','price':'12000'},
-        {'image': 'FN.jpg', 'name': 'Fried Noodle with Beef and Egg','price':'12000'},
-        {'image': 'BF.jpg', 'name': 'Beef Fried Rice ','price':'12000'},
-        {'image': 'BNS.jpg', 'name': 'Beef Ball Rice Noodle Soup','price':'12000'},
-      ],
-  },
+{
+  'image': 'images/food/papayalogo.jpg',
+  'text': 'ស្ងោម្រះ',
+  'rateandtype': '⭐ 4.9 Food | អាហារ',
+  'delivery': 'Free Delivery',
+  'distance': 'From 15 mins',
+  'relatedImages': [
+    {'image': 'images/food2.jpg', 'name': 'Grilled Fish', 'price': '10000'},
+    {'image': 'images/food3.jpg', 'name': 'Beef Soup', 'price': '10000'},
+    {'image': 'images/food1.jpg', 'name': 'Amok Dish', 'price': '10000'},
+  ],
+},
+{
+  'image': 'images/food/papayalogo.jpg',
+  'text': 'ស្ងោម្រះ',
+  'rateandtype': '⭐ 4.9 Food | អាហារ',
+  'delivery': 'Free Delivery',
+  'distance': 'From 15 mins',
+  'relatedImages': [
+    {'image': 'images/food2.jpg', 'name': 'Grilled Fish', 'price': '10000'},
+    {'image': 'images/food3.jpg', 'name': 'Beef Soup', 'price': '10000'},
+    {'image': 'images/food1.jpg', 'name': 'Amok Dish', 'price': '10000'},
+  ],
+}
 ];

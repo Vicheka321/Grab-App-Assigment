@@ -377,7 +377,7 @@ class _FoodScreenState extends State<FoodScreen> {
     List<int> shuffledIndicesvertical = [];
     void _shuffleIndiceshorizontal() {
       shuffledIndicesvertical =
-          List.generate(imageListfood.length, (index) => index);
+          List.generate(imageListfoodvertical.length, (index) => index);
       shuffledIndicesvertical.shuffle();
     }
 
