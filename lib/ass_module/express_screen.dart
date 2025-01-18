@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class  ExpressScreen extends StatelessWidget {
+class ExpressScreen extends StatelessWidget {
   const ExpressScreen({super.key});
   @override
   Widget build(BuildContext context) {
@@ -25,8 +25,8 @@ class  ExpressScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text('Welcome To Express',style: TextStyle(
-                              fontWeight: FontWeight.bold,color: Colors.white,
-                              fontSize: 20
+                                fontWeight: FontWeight.bold,color: Colors.white,
+                                fontSize: 20
                             ),),
                             Text('Get your item dekivered,',style: TextStyle(
                                 fontWeight: FontWeight.bold,color: Colors.white,
@@ -40,7 +40,7 @@ class  ExpressScreen extends StatelessWidget {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 2,bottom: 25),
-                          child: Image.asset('assets/Express_1.jpg',width: 179,height: 100,),
+                          child: Image.asset('images/Express_1.png',width: 179,height: 50,),
                         ),
 
                       ],
@@ -55,43 +55,43 @@ class  ExpressScreen extends StatelessWidget {
               left: 16,
               right: 16,
               child: Container(
-                padding: const EdgeInsets.all(16.0),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
-                      blurRadius: 10,
-                      offset: const Offset(0, 5),
-                    ),
-                  ],
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Icon(Icons.bookmark,color: Colors.blue,),
-                        SizedBox(width: 10,),
-                        Text('Royal Bodhitree Development',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold))
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: SizedBox(
-                        child: Text(':',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
+                  padding: const EdgeInsets.all(16.0),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        blurRadius: 10,
+                        offset: const Offset(0, 5),
                       ),
-                    ),
-                    Row(
-                      children: [
-                        Icon(Icons.bookmark,color: Colors.red,),
-                        SizedBox(width: 10,),
-                        Text('Dekiver to?',style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold),)
-                      ],
-                    ),
-                  ],
-                )
+                    ],
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(Icons.bookmark,color: Colors.blue,),
+                          SizedBox(width: 10,),
+                          Text('Royal Bodhitree Development',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold))
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: SizedBox(
+                          child: Text(':',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.bookmark,color: Colors.red,),
+                          SizedBox(width: 10,),
+                          Text('Dekiver to?',style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold),)
+                        ],
+                      ),
+                    ],
+                  )
               ),
             ),
             Positioned(
@@ -118,17 +118,16 @@ class  ExpressScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 330),
               child: Container(
-                height: 100,
+                height: 70,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(10),
                           color: Color(0xFFF5F5F5)
                       ),
                       width: 180,
-                      height: 50,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
@@ -138,7 +137,7 @@ class  ExpressScreen extends StatelessWidget {
                               children: [
                                 Text('Delivery to',style: TextStyle(
                                     color: Colors.grey,
-                                  fontSize: 19
+                                    fontSize: 19
                                 ),),
                                 Text('Phnom Penh',style: TextStyle(
                                     color: Colors.black,
@@ -147,10 +146,11 @@ class  ExpressScreen extends StatelessWidget {
                                 ))
                               ],
                             ),
-                            Image.asset('assets/location.jpg',
-                              fit: BoxFit.cover,
-                              width: 55,
-                              color: Colors.black38,
+                            Padding(
+                              padding: const EdgeInsets.only(top: 20,left: 15),
+                              child: Image.asset('images/location_imagess.png',
+                                width: 55,
+                              ),
                             )
                           ],
                         ),
@@ -159,7 +159,7 @@ class  ExpressScreen extends StatelessWidget {
                     SizedBox(width: 10,),
                     Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(10),
                           color: Color(0xFFF5F5F5)
                       ),
                       width: 180,
@@ -182,10 +182,11 @@ class  ExpressScreen extends StatelessWidget {
                                 ))
                               ],
                             ),
-                            Image.asset('assets/location.jpg',
-                              fit: BoxFit.cover,
-                              width: 55,
-                              color: Colors.black38,
+                            Padding(
+                              padding: const EdgeInsets.only(top: 20,left: 15),
+                              child: Image.asset('images/location_imagess.png',
+                                width: 55,
+                              ),
                             )
                           ],
                         ),
@@ -194,7 +195,7 @@ class  ExpressScreen extends StatelessWidget {
                     SizedBox(width: 10),
                     Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(10),
                           color: Color(0xFFF5F5F5)
                       ),
                       width: 180,
@@ -217,10 +218,11 @@ class  ExpressScreen extends StatelessWidget {
                                 ))
                               ],
                             ),
-                            Image.asset('assets/location.jpg',
-                              fit: BoxFit.cover,
-                              width: 55,
-                              color: Colors.black38,
+                            Padding(
+                              padding: const EdgeInsets.only(top: 20,left: 10),
+                              child: Image.asset('images/location_imagess.png',
+                                width: 55,
+                              ),
                             )
                           ],
                         ),
@@ -229,7 +231,7 @@ class  ExpressScreen extends StatelessWidget {
                     SizedBox(width: 10),
                     Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(10),
                           color: Color(0xFFF5F5F5)
                       ),
                       width: 180,
@@ -245,17 +247,18 @@ class  ExpressScreen extends StatelessWidget {
                                     color: Colors.grey,
                                     fontSize: 19
                                 ),),
-                                Text('Naga World 1',style: TextStyle(
+                                Text('Aeon Mall S..',style: TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 15
                                 ))
                               ],
                             ),
-                            Image.asset('assets/location.jpg',
-                              fit: BoxFit.cover,
-                              width: 55,
-                              color: Colors.black38,
+                            Padding(
+                              padding: const EdgeInsets.only(top: 20,left: 15),
+                              child: Image.asset('images/location_imagess.png',
+                                width: 55,
+                              ),
                             )
                           ],
                         ),
@@ -264,7 +267,7 @@ class  ExpressScreen extends StatelessWidget {
                     SizedBox(width: 10),
                     Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(10),
                           color: Color(0xFFF5F5F5)
                       ),
                       width: 180,
@@ -287,10 +290,11 @@ class  ExpressScreen extends StatelessWidget {
                                 ))
                               ],
                             ),
-                            Image.asset('assets/location.jpg',
-                              fit: BoxFit.cover,
-                              width: 55,
-                              color: Colors.black38,
+                            Padding(
+                              padding: const EdgeInsets.only(top: 20,left: 15),
+                              child: Image.asset('images/location_imagess.png',
+                                width: 55,
+                              ),
                             )
                           ],
                         ),
@@ -303,36 +307,131 @@ class  ExpressScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 450,left: 30),
               child: Text('Sell withc Grab Shop',style: TextStyle(
-                fontWeight: FontWeight.bold,fontSize: 20,
-                color: Colors.black
+                  fontWeight: FontWeight.bold,fontSize: 20,
+                  color: Colors.black
               ),),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 480,left: 30),
               child: Text('A simpler way to sell online, commission-free!',style: TextStyle(
-                fontSize: 12,
+                  fontSize: 12,
                   color: Colors.grey
               ),),
             ),
+            Padding(
+              padding: const EdgeInsets.only(top: 535,left: 25),
+              child: Row(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Color(0xfffecf9ff),
+                    ),
+                    width: 170,
+                    height: 70,
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 20,left: 5),
+                          child: Text('Build catalogue',style:
+                          TextStyle(
+                              fontWeight: FontWeight.bold,fontSize: 15,color: Colors.black
+                          )
+                            ,),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 20),
+                          child: Image.asset('images/book_image.jpg',
+                            width: 46,
+                            height: 50,
+                            fit: BoxFit.cover,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Color(0xffffff9bf)
+                    ),
+                    width: 170,
+                    height: 70,
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 20,left: 15),
+                          child: Text('Quick guide',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,fontSize: 15,color: Colors.black
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 20,left: 30),
+                          child: Image.asset('images/star_image.jpg',
+                            width: 30,
+                            height: 30,
+                            fit: BoxFit.cover,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 630,left: 25),
+              child: Text(
+                'You may like',style: TextStyle(
+                  fontWeight: FontWeight.bold,color: Colors.black,fontSize: 20
+              ),
+              ),
+            ),
             Row(
               children: [
-                Container(
-                  width: 100,
-                  height: 70,
-                  color: Colors.lightBlueAccent,
+                Padding(
+                  padding: const EdgeInsets.only(top: 700,left: 100),
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        maxRadius: 30,
+                        backgroundImage: AssetImage('images/profile.jpg',
+                        ),
+                      ),
+                      SizedBox(height: 10,),
+                      Text('Boss Clud',style: TextStyle(
+                          fontWeight: FontWeight.bold,color: Colors.black
+                      ),)
+                    ],
+                  ),
                 ),
-                SizedBox(width: 10),
-                Container(
-                  width: 100,
-                  height: 70,
-                  color: Colors.lightBlueAccent,
+                Padding(
+                  padding: const EdgeInsets.only(top: 700,left: 100),
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        maxRadius: 30,
+                        backgroundImage: AssetImage('images/message_image.jpg',
+                        ),
+                      ),
+                      SizedBox(height: 10,),
+                      Text('Boss Clud',style: TextStyle(
+                          fontWeight: FontWeight.bold,color: Colors.black
+                      ),)
+                    ],
+                  ),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),
+
     );
+
   }
 }
 
