@@ -142,8 +142,6 @@ List<Map<String, String>> imageListfood = [
 ];
 
 List<Map<String, dynamic>> imageListfoodvertical = [
-
-
   {
     'image': 'images/BF.jpg',
     'text': 'Amazone Cafe',
@@ -223,21 +221,19 @@ List<Map<String, dynamic>> imageListfoodvertical = [
       {'image': 'images/food1.jpg', 'name': 'Amok Dish', 'price': '10000'},
     ],
   },
-
-  
     {
-    'image': 'images/pagayalogo.jpg',
+    'image': 'images/food/pagayalogo.jpg',
     'text': 'ស្រី​ អនបុងល្ហុងឆ្ងាញ់ពេញចិត្ត',
     'rateandtype': '⭐️ 4.6 Food | អាហារ',
     'delivery': 'Free Delivery',
     'distance': 'From 30 mins',
     'relatedImages': [
-        {'image': 'images/PN.jpg', 'name': 'Papaya Noodle','price':'12000'},
-        {'image': 'images/SP.jpg', 'name': 'Raw Shrimp Papaya Salad','price':'12000'},
-        {'image': 'images/FR.jpg', 'name': 'Seafood Fried Rice ','price':'12000'},
-        {'image': 'images/FN.jpg', 'name': 'Fried Noodle with Beef and Egg','price':'12000'},
-        {'image': 'images/BF.jpg', 'name': 'Beef Fried Rice ','price':'12000'},
-        {'image': 'images/BNS.jpg','name': 'Beef Ball Rice Noodle Soup','price':'12000'},
+        {'image': 'images/food/PN.jpg', 'name': 'Papaya Noodle','price':'12000'},
+        {'image': 'images/food/SP.jpg', 'name': 'Raw Shrimp Papaya Salad','price':'12000'},
+        {'image': 'images/food/FR.jpg', 'name': 'Seafood Fried Rice ','price':'12000'},
+        {'image': 'images/food/FN.jpg', 'name': 'Fried Noodle with Beef and Egg','price':'12000'},
+        {'image': 'images/food/BF.jpg', 'name': 'Beef Fried Rice ','price':'12000'},
+        {'image': 'images/food/BNS.jpg','name': 'Beef Ball Rice Noodle Soup','price':'12000'},
       ],
   },
 ];
