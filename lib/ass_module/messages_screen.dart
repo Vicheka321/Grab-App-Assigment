@@ -121,8 +121,8 @@ class ChatsPage extends StatelessWidget {
       child: Center(
         child: Column(
           children: [
-            Image.network(
-              'https://www.peintureboomerang.com/wp-content/uploads/2020/04/AVATAR_Laurence_casque-1024x1024.png',
+            Image.asset(
+              'images/person_message.png',
               width: 500,
               height: 300,
             ),

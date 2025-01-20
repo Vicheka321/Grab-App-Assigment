@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ExpressScreen extends StatelessWidget {
   const ExpressScreen({super.key});
@@ -39,8 +40,8 @@ class ExpressScreen extends StatelessWidget {
                           ],
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(right: 2,bottom: 25),
-                          child: Image.asset('images/Express_1.png',width: 179,height: 50,),
+                          padding: const EdgeInsets.only(right: 6,bottom: 25),
+                          child: Image.asset('images/Express_1.png',width: 180,height: 70,),
                         ),
 
                       ],
@@ -72,20 +73,23 @@ class ExpressScreen extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          Icon(Icons.bookmark,color: Colors.blue,),
+                          Image.asset('images/blue_bold.png',height: 20,),
                           SizedBox(width: 10,),
-                          Text('Royal Bodhitree Development',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold))
-                        ],
+                          Text('Royal Bodhitree Development',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                          Spacer(),
+                          IconButton(onPressed: () {}, icon: Icon(Icons.swap_vert,color: Colors.grey,))
+                        ]
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 10),
                         child: SizedBox(
-                          child: Text(':',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
+                          child: Text(':',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),
+                          ),
                         ),
                       ),
                       Row(
                         children: [
-                          Icon(Icons.bookmark,color: Colors.red,),
+                          Image.asset('images/red_bold.png',height: 25),
                           SizedBox(width: 10,),
                           Text('Dekiver to?',style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold),)
                         ],
@@ -116,7 +120,7 @@ class ExpressScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 330),
+              padding: const EdgeInsets.only(top: 350,left: 20),
               child: Container(
                 height: 70,
                 child: ListView(
@@ -426,6 +430,14 @@ class ExpressScreen extends StatelessWidget {
                 ),
               ],
             ),
+            Padding(
+              padding: const EdgeInsets.only(top: 70,left: 10),
+              child: IconButton(onPressed: () {
+                Navigator.pop(context);
+              }, icon: Icon(
+                Icons.arrow_back,color: Colors.white,
+              )),
+            )
           ],
         ),
       ),
