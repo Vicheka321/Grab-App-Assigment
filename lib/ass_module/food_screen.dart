@@ -12,6 +12,33 @@ class FoodScreen extends StatefulWidget {
 
 class _FoodScreenState extends State<FoodScreen> {
   bool isDeliverySelected = true;
+  final TextEditingController searchController = TextEditingController();
+  List<Map<String, dynamic>> filteredItems = [];
+
+  @override
+  void initState() {
+    super.initState();
+    filteredItems = imageListfoodvertical;
+    searchController.addListener(_filterList);
+  }
+
+  @override
+  void dispose() {
+    searchController.dispose();
+    super.dispose();
+  }
+
+  void _filterList() {
+    final query = searchController.text.toLowerCase();
+    setState(() {
+      filteredItems = imageListfoodvertical
+          .where((item) =>
+              item['text'].toLowerCase().contains(query) ||
+              item['rateandtype'].toLowerCase().contains(query))
+          .toList();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,15 +90,15 @@ class _FoodScreenState extends State<FoodScreen> {
             ),
             child: Row(
               children: [
-                Icon(Icons.search, color: Colors.grey), 
-                SizedBox(width: 10.r), 
+                Icon(Icons.search, color: Colors.grey),
+                SizedBox(width: 10.r),
                 Expanded(
                   child: TextField(
+                    controller: searchController,
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: "Search...",
                       hintStyle: TextStyle(color: Colors.grey),
-                      
                     ),
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -291,30 +318,33 @@ class _FoodScreenState extends State<FoodScreen> {
   Widget buildListViewhorizontal() {
     List<int> shuffledIndices = [];
     void _shuffleIndiceshorizontal() {
-      shuffledIndices =
-          List.generate(imageListfoodvertical.length, (index) => index);
+      shuffledIndices = List.generate(filteredItems.length, (index) => index);
       shuffledIndices.shuffle();
     }
 
     if (shuffledIndices.isEmpty) {
       _shuffleIndiceshorizontal();
     }
+    int itemCount = filteredItems.isNotEmpty
+        ? (filteredItems.length > 5 ? 5 : filteredItems.length)
+        : 0;
+
     return SizedBox(
       height: 230.r,
       child: ListView.builder(
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
-        itemCount: 5,
+        itemCount: itemCount,
         itemBuilder: (context, index) {
           int uniqueIndex = shuffledIndices[index];
           return _buildlistfoodhorizontal(
-            imageListfoodvertical[uniqueIndex]['image']!,
-            imageListfoodvertical[uniqueIndex]['text']!,
-            imageListfoodvertical[uniqueIndex]['rateandtype']!,
-            imageListfoodvertical[uniqueIndex]['delivery']!,
-            imageListfoodvertical[uniqueIndex]['distance']!,
+            filteredItems[uniqueIndex]['image']!,
+            filteredItems[uniqueIndex]['text']!,
+            filteredItems[uniqueIndex]['rateandtype']!,
+            filteredItems[uniqueIndex]['delivery']!,
+            filteredItems[uniqueIndex]['distance']!,
             List<Map<String, String>>.from(
-                imageListfoodvertical[uniqueIndex]['relatedImages']),
+                filteredItems[uniqueIndex]['relatedImages']),
           );
         },
       ),
