@@ -26,4 +26,46 @@ class LanguageLogic extends ChangeNotifier {
     _language = languageList[_langIndex];
     notifyListeners();
   }
+
+  void changeToThailand() {
+    _langIndex = 3;
+    _language = languageList[_langIndex];
+    notifyListeners();
+  }
+
+  void changeToFrance() {
+    _langIndex = 4;
+    _language = languageList[_langIndex];
+    notifyListeners();
+  }
+
+  void changeToIndonesia() {
+    _langIndex = 5;
+    _language = languageList[_langIndex];
+    notifyListeners();
+  }
+
+  void changeToKorean() {
+    _langIndex = 6;
+    _language = languageList[_langIndex];
+    notifyListeners();
+  }
+
+  void changeToMalay() {
+    _langIndex = 7;
+    _language = languageList[_langIndex];
+    notifyListeners();
+  }
+
+  void changeToJapan() {
+    _langIndex = 8;
+    _language = languageList[_langIndex];
+    notifyListeners();
+  }
+
+  void changeToJVietnamese() {
+    _langIndex = 9;
+    _language = languageList[_langIndex];
+    notifyListeners();
+  }
 }

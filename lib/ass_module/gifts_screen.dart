@@ -1,5 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'langauge_data.dart';
+import 'langauge_logic.dart';
 
 class GiftsScreen extends StatefulWidget {
   const GiftsScreen({super.key});
@@ -10,6 +14,8 @@ class GiftsScreen extends StatefulWidget {
 
 class _GiftsScreenState extends State<GiftsScreen> {
   bool isDeliverySelected = true;
+  Language _language = Khmer();
+  int _langIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +32,11 @@ class _GiftsScreenState extends State<GiftsScreen> {
   }
 
   AppBar _buildAppBar() {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     return AppBar(
-      title: const Text("Your Gifts"),
+      title:  Text(_language.your_gifts),
+      // Style: TextStyle(fontFamily: 'siem reab',),
       leading: IconButton(
         icon: const Icon(Icons.arrow_back),
         onPressed: () {
@@ -38,6 +47,8 @@ class _GiftsScreenState extends State<GiftsScreen> {
   }
 
   Widget _buildOptionGift() {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     return Padding(
       padding: const EdgeInsets.only(
           top: 15.0, left: 25.0, right: 25.0, bottom: 25.0),
@@ -63,8 +74,8 @@ class _GiftsScreenState extends State<GiftsScreen> {
                 });
               },
               child: Text(
-                "Redeem",
-                style: TextStyle(
+                _language.redeem,
+                style: TextStyle(fontFamily: 'siem reab',
                   color: isDeliverySelected ? Colors.white : Colors.black,
                 ),
               ),
@@ -91,8 +102,8 @@ class _GiftsScreenState extends State<GiftsScreen> {
                 });
               },
               child: Text(
-                "History",
-                style: TextStyle(
+                _language.history,
+                style: TextStyle(fontFamily: 'siem reab',
                   color: !isDeliverySelected ? Colors.white : Colors.black,
                 ),
               ),
@@ -104,6 +115,8 @@ class _GiftsScreenState extends State<GiftsScreen> {
   }
 
   Widget _buildRedeemOption() {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -113,14 +126,14 @@ class _GiftsScreenState extends State<GiftsScreen> {
             child: Image.asset('images/gifts_redeem.png'),
           ),
           const SizedBox(height: 20),
-          const Text(
-            "Have GrabGifts to redeem?",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+           Text(
+            _language.have_GrabGifts,
+            style: TextStyle(fontFamily: 'siem reab',fontSize: 18, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 10),
-          const Text(
-            "Enter your gift code to see your surprise!",
-            style: TextStyle(fontSize: 14, color: Colors.grey),
+          Text(
+          _language.enter_your,
+            style: TextStyle(fontFamily: 'siem reab',fontSize: 14, color: Colors.grey),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 20),
@@ -141,6 +154,8 @@ class _GiftsScreenState extends State<GiftsScreen> {
   }
 
   Widget _buildHistoryOption() {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -151,9 +166,9 @@ class _GiftsScreenState extends State<GiftsScreen> {
                 'images/gifts_redeem.png'), // Replace with your image
           ),
           const SizedBox(height: 20),
-          const Text(
-            "No gifts sent or redeemed recently",
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          Text(
+            _language.no_gifts_sent,
+            style: TextStyle(fontFamily: 'siem reab',fontSize: 18, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 10),
           const Text(

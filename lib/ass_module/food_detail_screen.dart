@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
+
+import 'langauge_data.dart';
+import 'langauge_logic.dart';
 
 class DetailScreen extends StatefulWidget {
   final String picture;
@@ -23,6 +27,8 @@ class DetailScreen extends StatefulWidget {
 }
 
 class _DetailScreenState extends State<DetailScreen> {
+  Language _language = Khmer();
+  int _langIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(body: _buildBody(context));
@@ -40,6 +46,8 @@ class _DetailScreenState extends State<DetailScreen> {
   }
 
   Widget _buildStack() {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     bool isLightMode = Theme.of(context).brightness == Brightness.light;
     return Stack(
       clipBehavior: Clip.none,
@@ -109,11 +117,12 @@ class _DetailScreenState extends State<DetailScreen> {
                           color: Colors.white,
                         ),
                         Text(
-                          "Delivery",
+                          _language.delivery,
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 16.sp,
                             fontWeight: FontWeight.bold,
+                            fontFamily: 'siem reab'
                           ),
                         ),
                       ],
@@ -261,6 +270,8 @@ class _DetailScreenState extends State<DetailScreen> {
   }
 
   Widget _buidlgridview() {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     return Container(
       width: double.infinity,
       child: Padding(
@@ -269,7 +280,7 @@ class _DetailScreenState extends State<DetailScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "For You",
+              _language.for_you,
               style: TextStyle(
                   fontSize: 16.sp,
                   fontWeight: FontWeight.bold,

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'langauge_data.dart';
+import 'langauge_logic.dart';
 
 class HotelScreen extends StatelessWidget {
   const HotelScreen({super.key});
@@ -15,15 +19,19 @@ class HotelScreen extends StatelessWidget {
 }
 
 class Stacklist extends StatelessWidget {
-  const Stacklist({
+   Stacklist({
     super.key,
     required this.isLightMode,
   });
+  Language _language = Khmer();
+  int _langIndex = 0;
 
   final bool isLightMode;
 
   @override
   Widget build(BuildContext context) {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     final isLightMode = Theme.of(context).brightness == Brightness.light;
     return Stack(
       children: [
@@ -46,11 +54,12 @@ class Stacklist extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(left: 165, top: 25),
                           child: Text(
-                            'Hotel',
+                            _language.hotel,
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: isLightMode ? Colors.black : Colors.white,
                               fontSize: 18,
+                              fontFamily: 'siem reab'
                             ),
                           ),
                         ),
@@ -81,32 +90,35 @@ class Stacklist extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const SizedBox(height: 10),
-                        const Text(
-                          'Thousands of hotels',
+                         Text(
+                          _language.thousands_of_hotels,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Color(0xff03594d),
-                            fontSize: 25,
+                            fontSize: 23,
+                            fontFamily: 'siem reab'
                           ),
                         ),
-                        const Text(
-                          'To choose from',
+                         Text(
+                          _language.to_choose_from,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Color(0xff03594d),
-                            fontSize: 25,
+                            fontSize: 23,
+                            fontFamily: 'siem reab'
                           ),
                         ),
                         RichText(
                           text: TextSpan(
-                            text: 'Book a Stay Today, ',
-                            style: TextStyle(
+                            text: _language.book_a_stay,
+                            style: TextStyle(fontFamily: 'siem reab',
+                            fontSize: 12,
                               color: isLightMode ? Colors.black : Colors.white,
                             ),
                             children: <TextSpan>[
                               TextSpan(
-                                  text: 'Wherever',
-                                  style: TextStyle(
+                                  text: _language.wherever,
+                                  style: TextStyle(fontFamily: 'siem reab',
                                     color: isLightMode
                                         ? Colors.black
                                         : Colors.white,
@@ -117,8 +129,8 @@ class Stacklist extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      'you fancy',
-                      style: TextStyle(
+                      _language.you_fancy,
+                      style: TextStyle(fontFamily: 'siem reab',fontSize: 12,
                         color: isLightMode ? Colors.black : Colors.white,
                       ),
                     )
@@ -133,10 +145,10 @@ class Stacklist extends StatelessWidget {
               leading: Image.asset('images/agoda_hotel.png'),
               title: const Text("Agoda",
                   style: TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: const Text(
-                "Best price for 2+ million hotels",
+              subtitle:  Text(
+                _language.best_price,
                 style:
-                    TextStyle(fontWeight: FontWeight.w500, color: Colors.grey),
+                    TextStyle(fontFamily: 'siem reab',fontWeight: FontWeight.w500, color: Colors.grey),
               ),
               trailing: const Icon(
                 Icons.arrow_forward_ios,
@@ -151,10 +163,10 @@ class Stacklist extends StatelessWidget {
               ),
               title: const Text("Booking.com",
                   style: TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: const Text(
-                "Save Big on hotel and more worldwide",
+              subtitle:  Text(
+                _language.save_Big,
                 style:
-                    TextStyle(fontWeight: FontWeight.w500, color: Colors.grey),
+                    TextStyle(fontFamily: 'siem reab',fontWeight: FontWeight.w500, color: Colors.grey),
               ),
               trailing: const Icon(
                 Icons.arrow_forward_ios,
@@ -215,24 +227,29 @@ class hotelItem extends StatelessWidget {
 }
 
 class BookHotel extends StatelessWidget {
-  const BookHotel({
+   BookHotel({
     Key? key,
     required this.isLightMode,
   }) : super(key: key);
+    Language _language = Khmer();
+  int _langIndex = 0;
 
   final bool isLightMode;
 
   @override
   Widget build(BuildContext context) {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     final isLightMode = Theme.of(context).brightness == Brightness.light;
 
     return Padding(
       padding: const EdgeInsets.only(top: 20, right: 240),
       child: Text(
-        'Book your hotel now',
+        _language.Book_your,
         style: TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 15,
+          fontFamily: 'siem reab',
           color: isLightMode ? Colors.black : Colors.white,
         ),
       ),

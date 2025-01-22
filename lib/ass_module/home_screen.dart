@@ -733,6 +733,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildGridViewBuilderGrabThumbsUpLocalStars() {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     bool islightMode = Theme.of(context).brightness == Brightness.light;
     return Container(
       color: islightMode ? Colors.white : Colors.black12,
@@ -748,7 +750,7 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "⭐Grab Thumbs Up Local Stars⭐",
+              _language.grab_thumbs,
               style: TextStyle(
                   fontSize: 20.sp, //==============================
                   color: islightMode ? Colors.black : Colors.white,
@@ -812,6 +814,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildGridViewBuilderSpecialDeals() {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     bool islightMode = Theme.of(context).brightness == Brightness.light;
     return Container(
       color: islightMode ? Colors.white : Colors.black12,
@@ -827,7 +831,7 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "🎁Special Deals🎁",
+              _language.special_deals,
               style: TextStyle(
                   fontSize: 20.r,
                   color: islightMode ? Colors.black : Colors.white,
@@ -892,6 +896,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildGridViewBuilderMassiveSavings() {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     bool islightMode = Theme.of(context).brightness == Brightness.light;
     return Container(
       color: islightMode ? Colors.white : Colors.black12,
@@ -907,7 +913,7 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "💲Massive savings💲",
+              _language.massive_saving,
               style: TextStyle(
                   fontSize: 20.sp,
                   color: islightMode ? Colors.black : Colors.white,
@@ -972,6 +978,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildGridViewBuilderKeepDiscovering() {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     bool islightMode = Theme.of(context).brightness == Brightness.light;
     return Container(
       color: islightMode ? Colors.white : Colors.black12,
@@ -987,7 +995,7 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Keep discovering",
+              _language.keep_discovering,
               style: TextStyle(
                   fontSize: 20.sp,
                   color: islightMode ? Colors.black : Colors.white,

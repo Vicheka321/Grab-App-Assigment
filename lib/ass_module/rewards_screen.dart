@@ -1,12 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'langauge_data.dart';
 
-import 'package:flutter/material.dart';
+import 'langauge_logic.dart';
 
-class Rewards extends StatelessWidget {
-  const Rewards({Key? key}) : super(key: key);
+class Rewards extends StatefulWidget {
+  @override
+  State<Rewards> createState() => _RewardsState();
+}
+
+class _RewardsState extends State<Rewards> {
+  // const Rewards({Key? key}) : super(key: key);
+  Language _language = Khmer();
+
+  int _langIndex = 0;
 
   @override
   Widget build(BuildContext context) {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     bool isLightMode = Theme.of(context).brightness == Brightness.light;
     final size = MediaQuery.of(context).size;
 
@@ -69,7 +81,7 @@ class Rewards extends StatelessWidget {
                                 ),
                                 const SizedBox(width: 10),
                                 Text(
-                                  'My Rewards',
+                                  _language.my_rewards,
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: isLightMode
@@ -77,6 +89,7 @@ class Rewards extends StatelessWidget {
                                         : Color(
                                             0xfff0bae55), // Fixed custom color syntax
                                     fontSize: 18,
+                                    fontFamily: 'siem reab'
                                   ),
                                 ),
                               ],
@@ -107,15 +120,18 @@ class Rewards extends StatelessWidget {
 }
 
 class PositionList extends StatelessWidget {
-  const PositionList({
+   PositionList({
     super.key,
     required this.isLightMode,
   });
-
+  Language _language = Khmer();
+  int _langIndex = 0;
   final bool isLightMode;
 
   @override
   Widget build(BuildContext context) {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     bool isLightMode = Theme.of(context).brightness == Brightness.light;
     return Positioned(
       top: 200,
@@ -137,10 +153,11 @@ class PositionList extends StatelessWidget {
                 width: 30,
               ),
               title: Text(
-                'My Membership Detials',
+                _language.my_membership_etials,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 15,
+                  fontSize: 13,
+                  fontFamily: 'siem reab',
                   color: isLightMode ? Colors.black : Colors.white,
                 ),
               ),
@@ -175,10 +192,11 @@ class PositionList extends StatelessWidget {
                               'images/all_rewords.png',
                             ),
                           ),
-                          Text('All',
+                          Text(_language.all,
                               style: TextStyle(
                                 color:
                                     isLightMode ? Colors.black : Colors.white,
+                                    fontFamily: 'siem reab',
                               ))
                         ],
                       ),
@@ -195,9 +213,9 @@ class PositionList extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            'Limited Edition',
+                            _language.limited_edition,
                             style: TextStyle(
-                              color: isLightMode ? Colors.black : Colors.white,
+                              color: isLightMode ? Colors.black : Colors.white,fontFamily: 'siem reab',
                             ),
                           )
                         ],
@@ -233,10 +251,11 @@ class PositionList extends StatelessWidget {
                               'images/Travel_rewords.png',
                             ),
                           ),
-                          Text('Travel',
+                          Text(_language.travel,
                               style: TextStyle(
                                 color:
                                     isLightMode ? Colors.black : Colors.white,
+                                    fontFamily: 'siem reab',
                               ))
                         ],
                       ),
@@ -252,10 +271,11 @@ class PositionList extends StatelessWidget {
                               'images/service_rewords.png',
                             ),
                           ),
-                          Text('Service',
+                          Text(_language.service,
                               style: TextStyle(
                                 color:
                                     isLightMode ? Colors.black : Colors.white,
+                                    fontFamily: 'siem reab',
                               ))
                         ],
                       ),
@@ -271,10 +291,11 @@ class PositionList extends StatelessWidget {
                               'images/shoping_rewords.png',
                             ),
                           ),
-                          Text('Shopping',
+                          Text(_language.shopping,
                               style: TextStyle(
                                 color:
                                     isLightMode ? Colors.black : Colors.white,
+                                    fontFamily: 'siem reab',
                               ))
                         ],
                       ),
@@ -290,10 +311,11 @@ class PositionList extends StatelessWidget {
                               'images/Dine_rewords.jpg',
                             ),
                           ),
-                          Text('Din',
+                          Text(_language.dinner,
                               style: TextStyle(
                                 color:
                                     isLightMode ? Colors.black : Colors.white,
+                                    fontFamily: 'siem reab',
                               ))
                         ],
                       ),
@@ -309,8 +331,8 @@ class PositionList extends StatelessWidget {
                               'images/Entertainment_rewords.png',
                             ),
                           ),
-                          Text('Enterainment',
-                              style: TextStyle(
+                          Text(_language.enterainment,
+                              style: TextStyle(fontFamily: 'siem reab',
                                 color:
                                     isLightMode ? Colors.black : Colors.white,
                               ))
@@ -337,10 +359,11 @@ class PositionList extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 250, top: 20),
                   child: Text(
-                    'Sell All',
+                    _language.sell_all,
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 14,
                       fontWeight: FontWeight.bold,
+                      fontFamily: 'siem reab',
                       color: isLightMode ? Colors.blue : Colors.blue,
                     ),
                   ),

@@ -179,7 +179,9 @@ class _AccountScreenState extends State<AccountScreen> {
                 children: [
                   Text(_language.business_center,
                       style: TextStyle(
-                          fontSize: 16.sp, fontWeight: FontWeight.bold,fontFamily: 'siem reab')),
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'siem reab')),
                   Icon(
                     Icons.badge,
                     color: Colors.amber,
@@ -205,7 +207,10 @@ class _AccountScreenState extends State<AccountScreen> {
           children: [
             Text(
               _language.for_more_value,
-              style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold,fontFamily: 'siem reab'),
+              style: TextStyle(
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'siem reab'),
             ),
             SizedBox(height: 10.r),
             ListTile(
@@ -221,56 +226,69 @@ class _AccountScreenState extends State<AccountScreen> {
                   ),
                 ],
               ),
-              title:
-                  Text(_language.member, style: TextStyle(fontWeight: FontWeight.w500,fontFamily: 'siem reab')),
+              title: Text(_language.member,
+                  style: TextStyle(
+                      fontWeight: FontWeight.w500, fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             ListTile(
-              title: Text(_language.subscriptions,style: TextStyle(fontFamily: 'siem reab'),),
+              title: Text(
+                _language.subscriptions,
+                style: TextStyle(fontFamily: 'siem reab'),
+              ),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             ListTile(
-              title: Text(_language.challenges,style: TextStyle(fontFamily: 'siem reab')),
+              title: Text(_language.challenges,
+                  style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             SizedBox(height: 20.r),
             Text(
-            _language.general,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,fontFamily: 'siem reab'),
+              _language.general,
+              style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'siem reab'),
             ),
             SizedBox(height: 10.r),
             ListTile(
-              title: Text(_language.favourites,style: TextStyle(fontFamily: 'siem reab')),
+              title: Text(_language.favourites,
+                  style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             ListTile(
-              title: Text(_language.payment_methods,style: TextStyle(fontFamily: 'siem reab')),
+              title: Text(_language.payment_methods,
+                  style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             ListTile(
-              title: Text(_language.setting,style: TextStyle(fontFamily: 'siem reab')),
+              title: Text(_language.setting,
+                  style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             ListTile(
-              title: Text(_language.safety_setting,style: TextStyle(fontFamily: 'siem reab')),
+              title: Text(_language.safety_setting,
+                  style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             ListTile(
-              title: Text(_language.langauge,style: TextStyle(fontFamily: 'siem reab')),
+              title: Text(_language.langauge,
+                  style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {
                 _showPersistentBottomSheetChangeLangauge(context);
@@ -278,7 +296,8 @@ class _AccountScreenState extends State<AccountScreen> {
             ),
             Divider(),
             ListTile(
-              title: Text(_language.theme_mode,style: TextStyle(fontFamily: 'siem reab')),
+              title: Text(_language.theme_mode,
+                  style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {
                 _showPersistentBottomSheetThemeColor(context);
@@ -286,7 +305,8 @@ class _AccountScreenState extends State<AccountScreen> {
             ),
             Divider(),
             ListTile(
-              title: Text(_language.saved_places,style: TextStyle(fontFamily: 'siem reab')),
+              title: Text(_language.saved_places,
+                  style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
@@ -294,17 +314,22 @@ class _AccountScreenState extends State<AccountScreen> {
             SizedBox(height: 20.r),
             Text(
               _language.support,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,fontFamily: 'siem reab'),
+              style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'siem reab'),
             ),
             SizedBox(height: 10.r),
             ListTile(
-              title: Text(_language.help_centre,style: TextStyle(fontFamily: 'siem reab')),
+              title: Text(_language.help_centre,
+                  style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             ListTile(
-              title: Text(_language.share_feedback,style: TextStyle(fontFamily: 'siem reab')),
+              title: Text(_language.share_feedback,
+                  style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
@@ -312,23 +337,29 @@ class _AccountScreenState extends State<AccountScreen> {
             SizedBox(height: 20.r),
             Text(
               _language.opportunities,
-              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold,fontFamily: 'siem reab'),
+              style: TextStyle(
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'siem reab'),
             ),
             SizedBox(height: 10.r),
             ListTile(
-              title: Text(_language.map_your_city,style: TextStyle(fontFamily: 'siem reab')),
+              title: Text(_language.map_your_city,
+                  style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             ListTile(
-              title: Text(_language.support_the_environment,style: TextStyle(fontFamily: 'siem reab')),
+              title: Text(_language.support_the_environment,
+                  style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             ListTile(
-              title: Text(_language.drive_with_grab,style: TextStyle(fontFamily: 'siem reab')),
+              title: Text(_language.drive_with_grab,
+                  style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
@@ -461,7 +492,7 @@ class _AccountScreenState extends State<AccountScreen> {
     _langIndex = context.watch<LanguageLogic>().langIndex;
     return Container(
       width: double.infinity,
-      height: 300.r,
+      height: 700.r,
       child: ListView(
         children: [
           SizedBox(height: 10.r),
@@ -525,6 +556,141 @@ class _AccountScreenState extends State<AccountScreen> {
                 : null,
           ),
           Divider(),
+          ListTile(
+            leading: Image.asset(
+              'images/flag_of_thailand.png',
+              width: 30.r,
+              height: 30.r,
+            ),
+            title: Text("Thailand"),
+            onTap: () {
+              context.read<LanguageLogic>().changeToThailand();
+              Navigator.pop(context);
+            },
+            trailing: _langIndex == 3
+                ? Icon(
+                    Icons.check_circle,
+                    color: Colors.green,
+                    size: 25.sp,
+                  )
+                : null,
+          ),
+          Divider(),
+          ListTile(
+            leading: Image.asset(
+              'images/Flag_of_France.png',
+              width: 30.r,
+              height: 30.r,
+            ),
+            title: Text("France"),
+            onTap: () {
+              context.read<LanguageLogic>().changeToFrance();
+              Navigator.pop(context);
+            },
+            trailing: _langIndex == 4
+                ? Icon(
+                    Icons.check_circle,
+                    color: Colors.green,
+                    size: 25.sp,
+                  )
+                : null,
+          ),
+          Divider(),
+          ListTile(
+            leading: Image.asset(
+              'images/Flag_of_Indonesia.png',
+              width: 30.r,
+              height: 30.r,
+            ),
+            title: Text("Indonesia"),
+            onTap: () {
+              context.read<LanguageLogic>().changeToIndonesia();
+              Navigator.pop(context);
+            },
+            trailing: _langIndex == 5
+                ? Icon(
+                    Icons.check_circle,
+                    color: Colors.green,
+                    size: 25.sp,
+                  )
+                : null,
+          ),
+          ListTile(
+            leading: Image.asset(
+              'images/Flag_of_South_Korea.png',
+              width: 30.r,
+              height: 30.r,
+            ),
+            title: Text("Korean"),
+            onTap: () {
+              context.read<LanguageLogic>().changeToKorean();
+              Navigator.pop(context);
+            },
+            trailing: _langIndex == 6
+                ? Icon(
+                    Icons.check_circle,
+                    color: Colors.green,
+                    size: 25.sp,
+                  )
+                : null,
+          ),
+          ListTile(
+            leading: Image.asset(
+              'images/Flag_of_Malaysia.svg.png',
+              width: 30.r,
+              height: 30.r,
+            ),
+            title: Text("Malay"),
+            onTap: () {
+              context.read<LanguageLogic>().changeToMalay();
+              Navigator.pop(context);
+            },
+            trailing: _langIndex == 7
+                ? Icon(
+                    Icons.check_circle,
+                    color: Colors.green,
+                    size: 25.sp,
+                  )
+                : null,
+          ),
+          ListTile(
+            leading: Image.asset(
+              'images/Flag_of_Japan.svg.png',
+              width: 30.r,
+              height: 30.r,
+            ),
+            title: Text("Japanese"),
+            onTap: () {
+              context.read<LanguageLogic>().changeToJapan();
+              Navigator.pop(context);
+            },
+            trailing: _langIndex == 8
+                ? Icon(
+                    Icons.check_circle,
+                    color: Colors.green,
+                    size: 25.sp,
+                  )
+                : null,
+          ),
+          ListTile(
+            leading: Image.asset(
+              'images/flag_of_vietnam.png',
+              width: 30.r,
+              height: 30.r,
+            ),
+            title: Text("Vietnamese"),
+            onTap: () {
+              context.read<LanguageLogic>().changeToJVietnamese();
+              Navigator.pop(context);
+            },
+            trailing: _langIndex == 9
+                ? Icon(
+                    Icons.check_circle,
+                    color: Colors.green,
+                    size: 25.sp,
+                  )
+                : null,
+          ),
         ],
       ),
     );
