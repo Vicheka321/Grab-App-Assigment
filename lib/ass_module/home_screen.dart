@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grab_app/ass_module/challenges_screen.dart';
 import 'package:grab_app/ass_module/express_screen.dart';
+import 'package:grab_app/ass_module/rewards_screen.dart';
 import 'package:provider/provider.dart';
 
+import 'Hotel_screen.dart';
 import 'food_screen.dart';
 import 'gifts_screen.dart';
 import 'image_list.dart';
@@ -441,7 +443,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               InkWell(
                 onTap: () {
-                                    Navigator.of(context).push(
+                  Navigator.of(context).push(
                     CupertinoPageRoute(
                       builder: (context) => ExpressScreen(),
                     ),
@@ -624,6 +626,11 @@ class _HomeScreenState extends State<HomeScreen> {
               InkWell(
                 onTap: () {
                   print("images/Rewards.png");
+                  Navigator.of(context).push(
+                    CupertinoPageRoute(
+                      builder: (context) => Rewards(),
+                    ),
+                  );
                 },
                 child: Column(
                   children: [
@@ -660,7 +667,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(
+                    CupertinoPageRoute(
+                      builder: (context) => HotelScreen(),
+                    ),
+                  );
+                },
                 child: Column(
                   children: [
                     SizedBox(

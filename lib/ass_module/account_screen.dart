@@ -83,7 +83,7 @@ class _AccountScreenState extends State<AccountScreen> {
                     width: 40.r,
                     child: CircleAvatar(
                       radius: 20.r,
-                      backgroundImage: AssetImage('images/profile.jpg'),
+                      backgroundImage: AssetImage('images/person_message.png'),
                     ),
                   ),
                 ],

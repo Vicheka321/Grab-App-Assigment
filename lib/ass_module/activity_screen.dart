@@ -66,7 +66,11 @@ class ActivityScreen extends StatelessWidget {
           child: Center(
             child: Column(
               children: [
-                Image.asset('images/activity_image.png',width: 500,height: 150,),
+                Image.asset(
+                  'images/activity_image.png',
+                  width: 500,
+                  height: 150,
+                ),
                 const SizedBox(height: 10),
                 Text(
                   'Nothing happening now',

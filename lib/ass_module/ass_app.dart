@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
-
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
 import 'langauge_logic.dart';
 import 'splash_screen.dart';
 import 'theme_logic.dart';
-
 
 Widget providerAssApp() {
   return MultiProvider(

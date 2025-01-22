@@ -150,8 +150,7 @@ class ChatsPage extends StatelessWidget {
               'You can also get help from them via our',
               style: TextStyle(
                 // fontWeight: FontWeight.bold,
-                fontSize: 12
-              , fontFamily: 'siem reab',
+                fontSize: 12, fontFamily: 'siem reab',
               ),
             )
           ],
