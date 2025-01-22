@@ -48,17 +48,40 @@ class _FoodScreenState extends State<FoodScreen> {
           right: 25.r,
           child: Container(
             height: 60.r,
+            padding: EdgeInsets.symmetric(horizontal: 16.r),
             decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(8.0.r),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.2.r),
-                    blurRadius: 10.0.r,
-                    spreadRadius: 1.0.r,
-                    offset: Offset(4.0, 4.0.r),
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(8.0.r),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.2.r),
+                  blurRadius: 10.0.r,
+                  spreadRadius: 1.0.r,
+                  offset: Offset(4.0, 4.0.r),
+                ),
+              ],
+            ),
+            child: Row(
+              children: [
+                Icon(Icons.search, color: Colors.grey), 
+                SizedBox(width: 10.r), 
+                Expanded(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: "Search...",
+                      hintStyle: TextStyle(color: Colors.grey),
+                      
+                    ),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                      fontFamily: 'siem reab',
+                    ),
                   ),
-                ]),
+                ),
+              ],
+            ),
           ),
         ),
       ],
