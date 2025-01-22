@@ -142,8 +142,6 @@ List<Map<String, String>> imageListfood = [
 ];
 
 List<Map<String, dynamic>> imageListfoodvertical = [
-
-
   {
     'image': 'images/food1.jpg',
     'text': 'Amazone Cafe',
@@ -161,8 +159,6 @@ List<Map<String, dynamic>> imageListfoodvertical = [
       {'image': 'images/food1.jpg', 'name': 'Amok Dish', 'price': '15 \$'},
     ],
   },
-
-  
   {
     'image': 'images/food2.jpg',
     'text': 'ត្រីអាំងអំពិលទំ',
