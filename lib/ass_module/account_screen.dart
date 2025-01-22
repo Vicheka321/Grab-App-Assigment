@@ -118,9 +118,11 @@ class _AccountScreenState extends State<AccountScreen> {
                     color: Colors.amber,
                     size: 30.sp,
                   ),
-                  Text("Start giving reviews",
+                  Text(_language.start_giving_reviews,
                       style: TextStyle(
-                          fontSize: 16.sp, fontWeight: FontWeight.bold)),
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'siem reab')),
                   Spacer(),
                   Icon(Icons.arrow_forward_ios, size: 16.sp),
                 ],
@@ -175,9 +177,9 @@ class _AccountScreenState extends State<AccountScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Business Center",
+                  Text(_language.business_center,
                       style: TextStyle(
-                          fontSize: 16.sp, fontWeight: FontWeight.bold)),
+                          fontSize: 16.sp, fontWeight: FontWeight.bold,fontFamily: 'siem reab')),
                   Icon(
                     Icons.badge,
                     color: Colors.amber,
@@ -202,8 +204,8 @@ class _AccountScreenState extends State<AccountScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "For more value",
-              style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
+              _language.for_more_value,
+              style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold,fontFamily: 'siem reab'),
             ),
             SizedBox(height: 10.r),
             ListTile(
@@ -220,55 +222,55 @@ class _AccountScreenState extends State<AccountScreen> {
                 ],
               ),
               title:
-                  Text("MEMBER", style: TextStyle(fontWeight: FontWeight.w500)),
+                  Text(_language.member, style: TextStyle(fontWeight: FontWeight.w500,fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             ListTile(
-              title: Text("Subscriptions"),
+              title: Text(_language.subscriptions,style: TextStyle(fontFamily: 'siem reab'),),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             ListTile(
-              title: Text("Challenges"),
+              title: Text(_language.challenges,style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             SizedBox(height: 20.r),
             Text(
-              "General",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            _language.general,
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,fontFamily: 'siem reab'),
             ),
             SizedBox(height: 10.r),
             ListTile(
-              title: Text("Favourites"),
+              title: Text(_language.favourites,style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             ListTile(
-              title: Text("Payment Methods"),
+              title: Text(_language.payment_methods,style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             ListTile(
-              title: Text("Settings"),
+              title: Text(_language.setting,style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             ListTile(
-              title: Text("Safety settings"),
+              title: Text(_language.safety_setting,style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             ListTile(
-              title: Text("Language"),
+              title: Text(_language.langauge,style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {
                 _showPersistentBottomSheetChangeLangauge(context);
@@ -276,7 +278,7 @@ class _AccountScreenState extends State<AccountScreen> {
             ),
             Divider(),
             ListTile(
-              title: Text("Theme Mode"),
+              title: Text(_language.theme_mode,style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {
                 _showPersistentBottomSheetThemeColor(context);
@@ -284,49 +286,49 @@ class _AccountScreenState extends State<AccountScreen> {
             ),
             Divider(),
             ListTile(
-              title: Text("Saved Places"),
+              title: Text(_language.saved_places,style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             SizedBox(height: 20.r),
             Text(
-              "Support",
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              _language.support,
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,fontFamily: 'siem reab'),
             ),
             SizedBox(height: 10.r),
             ListTile(
-              title: Text("Help Centre"),
+              title: Text(_language.help_centre,style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             ListTile(
-              title: Text("Share Feedback"),
+              title: Text(_language.share_feedback,style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             SizedBox(height: 20.r),
             Text(
-              "Opportunities",
-              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
+              _language.opportunities,
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold,fontFamily: 'siem reab'),
             ),
             SizedBox(height: 10.r),
             ListTile(
-              title: Text("Map Your City"),
+              title: Text(_language.map_your_city,style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             ListTile(
-              title: Text("Support the Environment"),
+              title: Text(_language.support_the_environment,style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
             Divider(),
             ListTile(
-              title: Text("Drive With Grab"),
+              title: Text(_language.drive_with_grab,style: TextStyle(fontFamily: 'siem reab')),
               trailing: Icon(Icons.arrow_forward_ios, size: 16.sp),
               onTap: () {},
             ),
