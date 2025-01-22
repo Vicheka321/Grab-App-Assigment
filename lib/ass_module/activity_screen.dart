@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'langauge_data.dart';
+import 'langauge_logic.dart';
 
 class ActivityScreen extends StatelessWidget {
-  const ActivityScreen({super.key});
+   ActivityScreen({super.key});
+  Language _language = Khmer();
+  int _langIndex = 0;
 
   @override
   Widget build(BuildContext context) {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     bool islightMode = Theme.of(context).brightness == Brightness.light;
     return Scaffold(
       backgroundColor: islightMode ? Colors.white : Colors.black,
@@ -12,11 +20,12 @@ class ActivityScreen extends StatelessWidget {
         title: Padding(
           padding: EdgeInsets.only(left: 15),
           child: Text(
-            'Activity',
+            _language.activity,
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: islightMode ? Colors.black : Colors.white,
               fontSize: 23,
+              fontFamily: 'siem reab'
             ),
           ),
         ),
@@ -48,10 +57,11 @@ class ActivityScreen extends StatelessWidget {
                   ),
                   SizedBox(width: 9),
                   Text(
-                    'History',
+                    _language.history,
                     style: TextStyle(
                       color: islightMode ? Colors.black : Colors.white,
                       fontSize: 15,
+                      fontFamily: 'siem reab'
                     ),
                   ),
                 ],
@@ -73,10 +83,11 @@ class ActivityScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  'Nothing happening now',
+                  _language.nothing_happening_now,
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
+                    fontFamily: 'siem reab',
                     color: islightMode ? Colors.black : Colors.white,
                   ),
                 ),
@@ -84,9 +95,10 @@ class ActivityScreen extends StatelessWidget {
                   height: 10,
                 ),
                 Text(
-                  'when you use our service, you will see them here',
+                  _language.when_you,
                   style: TextStyle(
                     color: islightMode ? Colors.black : Colors.white,
+                    fontFamily: 'siem reab'
                   ),
                 )
               ],

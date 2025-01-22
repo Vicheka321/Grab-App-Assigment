@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
+
+import 'langauge_data.dart';
+import 'langauge_logic.dart';
 
 class ExpressScreen extends StatelessWidget {
   const ExpressScreen({super.key});
@@ -16,12 +20,16 @@ class ExpressScreen extends StatelessWidget {
 }
 
 class StackList extends StatelessWidget {
-  const StackList({
+   StackList({
     super.key,
   });
+  Language _language = Khmer();
+  int _langIndex = 0;
 
   @override
   Widget build(BuildContext context) {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     bool isLightMode = Theme.of(context).brightness == Brightness.light;
     return Stack(
       children: [
@@ -40,25 +48,28 @@ class StackList extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Welcome To Express',
+                          _language.welcome_to_Express,
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
-                              fontSize: 20),
+                              fontFamily: 'siem reab',
+                              fontSize: 18),
                         ),
                         Text(
-                          'Get your item dekivered,',
+                          _language.get_your_item_delivered,
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
-                              fontSize: 12),
+                              fontFamily: 'siem reab',
+                              fontSize: 11),
                         ),
                         Text(
-                          'whenever,wherever,',
+                          _language.whenever_wherever,
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
-                              fontSize: 12),
+                              fontFamily: 'siem reab',
+                              fontSize: 11),
                         ),
                       ],
                     ),
@@ -66,8 +77,8 @@ class StackList extends StatelessWidget {
                       padding: const EdgeInsets.only(right: 6, bottom: 25),
                       child: Image.asset(
                         'images/Express_1.png',
-                        width: 180,
-                        height: 70,
+                        width: 160,
+                        height: 80,
                       ),
                     ),
                   ],
@@ -105,10 +116,11 @@ class StackList extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 450, left: 30),
           child: Text(
-            'Sell withc Grab Shop',
+            _language.sell_with,
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 20,
+              fontFamily: 'siem reab',
               color: isLightMode ? Colors.black : Colors.white,
             ),
           ),
@@ -116,9 +128,10 @@ class StackList extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 480, left: 30),
           child: Text(
-            'A simpler way to sell online, commission-free!',
+            _language.a_simpler_way,
             style: TextStyle(
               fontSize: 12,
+              fontFamily: 'siem reab',
               color: isLightMode ? Colors.grey : Colors.grey,
             ),
           ),
@@ -139,10 +152,11 @@ class StackList extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 20, left: 5),
                       child: Text(
-                        'Build catalogue',
+                        _language.build_catalogue,
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 15,
+                            fontFamily: 'siem reab',
                             color: Colors.black),
                       ),
                     ),
@@ -170,10 +184,11 @@ class StackList extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(bottom: 20, left: 15),
                       child: Text(
-                        'Quick guide',
+                        _language.quick_guide,
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            fontSize: 15,
+                            fontSize: 14,
+                            fontFamily: 'siem reab',
                             color: Colors.black),
                       ),
                     ),
@@ -195,11 +210,12 @@ class StackList extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 630, left: 25),
           child: Text(
-            'You may like',
+            _language.you_may_like,
             style: TextStyle(
                 fontWeight: FontWeight.bold,
+                fontFamily: 'siem reab',
                 color: isLightMode ? Colors.black : Colors.white,
-                fontSize: 20),
+                fontSize: 18),
           ),
         ),
         Row(
@@ -221,6 +237,7 @@ class StackList extends StatelessWidget {
                     'Boss Clud',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
+                        fontFamily: 'siem reab',
                         color: isLightMode ? Colors.black : Colors.white),
                   )
                 ],
@@ -243,6 +260,7 @@ class StackList extends StatelessWidget {
                     'Boss Clud',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
+                        fontFamily: 'siem reab',
                         color: isLightMode ? Colors.black : Colors.white),
                   )
                 ],
@@ -267,12 +285,16 @@ class StackList extends StatelessWidget {
 }
 
 class ListViewList extends StatelessWidget {
-  const ListViewList({
+   ListViewList({
     super.key,
   });
+  Language _language = Khmer();
+  int _langIndex = 0;
 
   @override
   Widget build(BuildContext context) {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     return Padding(
       padding: const EdgeInsets.only(top: 350, left: 20),
       child: Container(
@@ -293,13 +315,14 @@ class ListViewList extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Delivery to',
-                          style: TextStyle(color: Colors.grey, fontSize: 19),
+                          _language.deliver_to,
+                          style: TextStyle(fontFamily: 'siem reab',color: Colors.grey, fontSize: 13),
                         ),
                         Text('Phnom Penh',
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'siem reab',
                                 fontSize: 15))
                       ],
                     ),
@@ -331,13 +354,13 @@ class ListViewList extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Delivery to',
-                          style: TextStyle(color: Colors.grey, fontSize: 19),
+                          _language.deliver_to,
+                          style: TextStyle(fontFamily: 'siem reab',color: Colors.grey, fontSize: 13),
                         ),
                         Text('Aeon Mall...',
                             style: TextStyle(
                                 color: Colors.black,
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.bold,fontFamily: 'siem reab',
                                 fontSize: 15))
                       ],
                     ),
@@ -367,13 +390,13 @@ class ListViewList extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Delivery to',
-                          style: TextStyle(color: Colors.grey, fontSize: 19),
+                          _language.deliver_to,
+                          style: TextStyle(fontFamily: 'siem reab',color: Colors.grey, fontSize: 13),
                         ),
                         Text('Aeon Mall S...',
                             style: TextStyle(
                                 color: Colors.black,
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.bold,fontFamily: 'siem reab',
                                 fontSize: 15))
                       ],
                     ),
@@ -403,12 +426,12 @@ class ListViewList extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Delivery to',
-                          style: TextStyle(color: Colors.grey, fontSize: 19),
+                          _language.deliver_to,
+                          style: TextStyle(fontFamily: 'siem reab',color: Colors.grey, fontSize: 13),
                         ),
                         Text('Aeon Mall S..',
                             style: TextStyle(
-                                color: Colors.black,
+                                color: Colors.black,fontFamily: 'siem reab',
                                 fontWeight: FontWeight.bold,
                                 fontSize: 15))
                       ],
@@ -439,13 +462,13 @@ class ListViewList extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Delivery to',
-                          style: TextStyle(color: Colors.grey, fontSize: 19),
+                          _language.deliver_to,
+                          style: TextStyle(fontFamily: 'siem reab',color: Colors.grey, fontSize: 13),
                         ),
                         Text('Central Ma...',
                             style: TextStyle(
                                 color: Colors.black,
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.bold,fontFamily: 'siem reab',
                                 fontSize: 15))
                       ],
                     ),
@@ -478,12 +501,16 @@ class PositionedList extends StatelessWidget {
 }
 
 class PostionedList extends StatelessWidget {
-  const PostionedList({
+   PostionedList({
     super.key,
   });
+  Language _language = Khmer();
+  int _langIndex = 0;
 
   @override
   Widget build(BuildContext context) {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     bool isLightMode = Theme.of(context).brightness == Brightness.light;
     return Positioned(
       top: 200,
@@ -514,9 +541,9 @@ class PostionedList extends StatelessWidget {
                   width: 10,
                 ),
                 Text(
-                  'Royal Bodhitree Development',
+                  _language.royal_bodhitree,
                   style: TextStyle(
-                      color: isLightMode ? Colors.black : Colors.white,
+                      color: isLightMode ? Colors.black : Colors.white,fontFamily: 'siem reab',fontSize: 13,
                       fontWeight: FontWeight.bold),
                 ),
                 Spacer(),
@@ -545,9 +572,9 @@ class PostionedList extends StatelessWidget {
                     width: 10,
                   ),
                   Text(
-                    'Dekiver to?',
+                    _language.deliver_to,
                     style: TextStyle(
-                        color: isLightMode ? Colors.black : Colors.white,
+                        color: isLightMode ? Colors.black : Colors.white,fontFamily: 'siem reab',fontSize: 13,
                         fontWeight: FontWeight.bold),
                   )
                 ],

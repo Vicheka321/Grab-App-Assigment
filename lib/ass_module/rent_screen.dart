@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'langauge_data.dart';
+import 'langauge_logic.dart';
 
 class RentScreen extends StatefulWidget {
-  const RentScreen({super.key});
+  // const RentScreen({super.key});
+  
 
   @override
   State<RentScreen> createState() => _RentScreenState();
 }
 
 class _RentScreenState extends State<RentScreen> {
+  Language _language = Khmer();
+  int _langIndex = 0;
   @override
   Widget build(BuildContext context) {
+  _language = context.watch<LanguageLogic>().language;
+  _langIndex = context.watch<LanguageLogic>().langIndex;
     return Scaffold(
       appBar: buildAppBar(),
       body: buildBody(),
@@ -43,10 +52,11 @@ class _RentScreenState extends State<RentScreen> {
                 height: 200,
               ),
             ),
-            const Text(
-              "Rent a vehicle, hire a driver",
+             Text(
+              _language.Rent_a_vehicle,
               style: TextStyle(
                 fontSize: 20,
+                fontFamily: 'siem reab',
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -59,6 +69,7 @@ class _RentScreenState extends State<RentScreen> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 16,
+                  fontFamily: 'siem reab',
                   color: Colors.grey,
                 ),
               ),
@@ -66,10 +77,11 @@ class _RentScreenState extends State<RentScreen> {
             const SizedBox(height: 10),
             GestureDetector(
               onTap: () {},
-              child: const Text(
-                "Find out more",
+              child:  Text(
+                _language.find_out_more,
                 style: TextStyle(
                   fontSize: 16,
+                  fontFamily: 'siem reab',
                   color: Colors.blue,
                   decoration: TextDecoration.underline,
                 ),
@@ -82,29 +94,29 @@ class _RentScreenState extends State<RentScreen> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
-          child: const Padding(
-            padding: EdgeInsets.all(20.0),
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   children: [
-                    Icon(Icons.my_location, color: Colors.blue),
-                    SizedBox(width: 10),
+                    const Icon(Icons.my_location, color: Colors.blue),
+                    const SizedBox(width: 10),
                     Text(
-                      "Current Location",
-                      style: TextStyle(fontSize: 16),
+                      _language.current_location,
+                      style: const TextStyle(fontSize: 16,fontFamily: 'siem reab',),
                     ),
                   ],
                 ),
-                Divider(),
+                const Divider(),
                 Row(
                   children: [
-                    Icon(Icons.access_time, color: Colors.blue),
-                    SizedBox(width: 10),
+                    const Icon(Icons.access_time, color: Colors.blue),
+                    const SizedBox(width: 10),
                     Text(
-                      "How long?",
-                      style: TextStyle(fontSize: 16),
+                      _language.how_long,
+                      style: const TextStyle(fontSize: 16,fontFamily: 'siem reab',),
                     ),
                   ],
                 ),

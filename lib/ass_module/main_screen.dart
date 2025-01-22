@@ -37,9 +37,9 @@ class _MainScreenState extends State<MainScreen> {
       index: _selectedIndex,
       children: [
         HomeScreen(),
-        const ActivityScreen(),
-        const PaymentScreen(),
-        const MessagesScreen(),
+        ActivityScreen(),
+        PaymentScreen(),
+        MessagesScreen(),
         AccountScreen()
       ],
     );

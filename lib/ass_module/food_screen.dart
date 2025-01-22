@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 
 import 'food_detail_screen.dart';
 import 'image_list.dart';
+import 'langauge_data.dart';
+import 'langauge_logic.dart';
 
 class FoodScreen extends StatefulWidget {
   @override
@@ -11,6 +14,8 @@ class FoodScreen extends StatefulWidget {
 }
 
 class _FoodScreenState extends State<FoodScreen> {
+  Language _language = Khmer();
+  int _langIndex = 0;
   bool isDeliverySelected = true;
   @override
   Widget build(BuildContext context) {
@@ -89,6 +94,8 @@ class _FoodScreenState extends State<FoodScreen> {
   }
 
   Widget buildGradientHeader(BuildContext context) {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     return Column(
       children: [
         Container(
@@ -124,11 +131,12 @@ class _FoodScreenState extends State<FoodScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "DELIVER TO",
+                            _language.DELIVER_TO,
                             style: TextStyle(
                               color: Colors.white70,
                               fontSize: 12.sp,
                               fontWeight: FontWeight.w600,
+                              fontFamily: 'siem reab'
                             ),
                           ),
                           Text(
@@ -171,6 +179,8 @@ class _FoodScreenState extends State<FoodScreen> {
   }
 
   Widget buildDeliveryOptions() {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     return Padding(
       padding:
           EdgeInsets.only(top: 40.r, left: 25.r, right: 25.r, bottom: 25.r),
@@ -204,8 +214,8 @@ class _FoodScreenState extends State<FoodScreen> {
                   ),
                   SizedBox(width: 8.r),
                   Text(
-                    "Delivery",
-                    style: TextStyle(
+                    _language.delivery,
+                    style: TextStyle(fontFamily: 'siem reab',fontSize: 12,
                       color: isDeliverySelected ? Colors.white : Colors.black,
                     ),
                   ),
@@ -242,8 +252,8 @@ class _FoodScreenState extends State<FoodScreen> {
                   ),
                   SizedBox(width: 8.r),
                   Text(
-                    "Self Pick Up",
-                    style: TextStyle(
+                    _language.self_Pick_Up,
+                    style: TextStyle(fontFamily: 'siem reab',fontSize: 12,
                       color: !isDeliverySelected ? Colors.white : Colors.black,
                     ),
                   ),
@@ -257,6 +267,8 @@ class _FoodScreenState extends State<FoodScreen> {
   }
 
   Widget buildDeliveryContent() {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     return Container(
       width: double.infinity,
       child: Padding(
@@ -267,8 +279,8 @@ class _FoodScreenState extends State<FoodScreen> {
             Row(
               children: [
                 Text(
-                  "Fast Delivery ",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  _language.fast_delivery,
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold,fontFamily: 'siem reab',),
                 ),
                 Spacer(),
                 Icon(Icons.arrow_forward)
@@ -278,8 +290,8 @@ class _FoodScreenState extends State<FoodScreen> {
             buildListViewhorizontal(),
             SizedBox(height: 16.r),
             Text(
-              "Popular Restaurants ",
-              style: TextStyle(fontSize: 18.r, fontWeight: FontWeight.bold),
+              _language.popular_restaurants,
+              style: TextStyle(fontSize: 18.r, fontWeight: FontWeight.bold,fontFamily: 'siem reab',),
             ),
             buildListViewvertical()
           ],

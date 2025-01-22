@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'langauge_data.dart';
+import 'langauge_logic.dart';
 
 class PaymentScreen extends StatelessWidget {
-  const PaymentScreen({super.key});
+   PaymentScreen({super.key});
+  Language _language = Khmer();
+  int _langIndex = 0;
 
   final String cover =
       'https://img.freepik.com/premium-photo/abstract-16-light-background-wallpaper-colorful-gradient-blurry-soft-smooth-motion-bright-shine_792836-53865.jpg';
 
   @override
   Widget build(BuildContext context) {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     return Scaffold(
       // backgroundColor: const Color(0xFFFFFFFF),
       body: SingleChildScrollView(
@@ -17,10 +25,11 @@ class PaymentScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 150.0),
               child: Text(
-                'Recent transaction',
+                _language.recent_transaction,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 25,
+                  fontSize: 22,
+                  fontFamily: 'siem reab',
                 ),
               ),
             ),
@@ -36,9 +45,10 @@ class PaymentScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
                   Text(
-                    'There’s no recent activity to show here.',
+                    _language.There_is_no,
                     style: TextStyle(
                       fontSize: 16,
+                      fontFamily: 'siem reab'
                       // color: Colors.black54,
                     ),
                   ),
@@ -46,11 +56,12 @@ class PaymentScreen extends StatelessWidget {
                   GestureDetector(
                     onTap: () {},
                     child: Text(
-                      'See past transactions',
+                      _language.see_past_transactions,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.blue,
                         fontSize: 18,
+                        fontFamily: 'siem reab'
                       ),
                     ),
                   ),
@@ -65,15 +76,21 @@ class PaymentScreen extends StatelessWidget {
 }
 
 class StackList extends StatelessWidget {
-  const StackList({
+   StackList({
     super.key,
     required this.cover,
+    
   });
+  Language _language = Khmer();
+  int _langIndex = 0;
 
   final String cover;
 
   @override
   Widget build(BuildContext context) {
+
+  _language = context.watch<LanguageLogic>().language;
+  _langIndex = context.watch<LanguageLogic>().langIndex;
     return SizedBox(
       height: 300,
       child: Stack(
@@ -112,16 +129,19 @@ class StackList extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Add Card',
+                        _language.add_card,
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
+                          fontFamily: 'siem reab'
                         ),
                       ),
                       Text(
-                        'Go cashless with a credit or debit card',
+                        _language.go_cashless,
                         style: TextStyle(
                           color: Colors.white,
+                          fontSize: 13,
+                          fontFamily: 'siem reab'
                         ),
                       ),
                     ],
@@ -142,19 +162,21 @@ class StackList extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Payment',
+                      _language.payment,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
-                        fontSize: 30,
+                        fontSize: 25,
+                        fontFamily: 'siem reab',
                       ),
                     ),
                     SizedBox(height: 5), // Space between title and subtitle
                     Text(
-                      'Simple flexible everyday payments',
+                      _language.simple_flexible,
                       style: TextStyle(
                         color: Colors.black,
-                        fontSize: 16,
+                        fontSize: 15,
+                        fontFamily: 'siem reab',
                       ),
                     ),
                   ],

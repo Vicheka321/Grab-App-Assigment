@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 List<Language> languageList = [Khmer(), Language(), Chinese()];
 
 class Language {
@@ -44,6 +46,11 @@ class Language {
   String get map_your_city => "Map Your City";
   String get support_the_environment => "Support the Environment";
   String get drive_with_grab => "Drive With Grab";
+  String get grab_thumbs => "⭐Grab Thumbs Up Local Stars⭐";
+  String get special_deals => "🎁Special Deals🎁";
+  String get massive_saving => "💲Massive savings💲";
+  String get keep_discovering => "Keep discovering";
+
   String get messages => "Messages"; //message_screen
   String get chats => "Chats";
   String get notifications => "Notifications";
@@ -85,7 +92,75 @@ class Language {
   String get breeze_past_last_minute_stress => "Breeze past last-minute stress";
   String get caption => "caption";
   String get subcaption => "subcaption";
-//   String get 
+  String get my_rewards => "My Rewards";
+  String get my_membership_etials => "My Membership Detials";
+  String get limited_edition => "Limited Edition";
+  String get travel => "Travel";
+  String get service => "Service";
+  String get shopping => "Shopping";
+  String get dinner => "Dinner";
+  String get enterainment => "Enterainment";
+  String get sell_all => "Sell All";
+  //rent screen
+  String get Rent_a_vehicle => "Rent a vehicle, hire a driver";
+  String get visit_multiple =>
+      "Visit multiple places or attend events in the city.";
+  String get current_location => "Current Location";
+  String get how_long => "How Long?";
+  String get find_out_more => "Find out more";
+  //payment screen
+  String get recent_transaction => "Recent transaction";
+  String get There_is_no => "There’s no recent activity to show here.";
+  String get see_past_transactions => "See past transactions";
+  String get add_card => "Add Card";
+  String get go_cashless => "Go cashless with a credit or debit card";
+  String get simple_flexible => "Simple flexible everyday payments";
+  //Activity screen
+  String get history => "History";
+  String get nothing_happening_now => "Nothing happening now";
+  String get when_you => "when you use our service, you will see them here";
+  //Hotel screen
+  String get hotel => "Hotel";
+  String get thousands_of_hotels => "Thousands of hotels";
+  String get to_choose_from => "To choose from";
+  String get book_a_stay => "Book a Stay Today, ";
+  String get wherever => "Wherever";
+  String get you_fancy => "you fancy";
+  String get Book_your => "Book your hotel now";
+  String get best_price => "Best price for 2+ million hotels";
+  String get save_Big => "Save Big on hotel and more worldwide";
+
+  //Your Gifts screen
+  String get your_gifts => "Your Gifts";
+  String get redeem => "Redeem";
+  String get have_GrabGifts => "Have GrabGifts to redeem?";
+  String get enter_your => "Enter your gift code to see your surprise!";
+  String get no_gifts_sent => "No gifts sent or redeemed recently";
+
+  String get DELIVER_TO => "DELIVER TO";
+  String get delivery => "Delivery";
+  String get self_Pick_Up => "Self Pick Up";
+  String get fast_delivery => "Fast Delivery ";
+  String get popular_restaurants => "Popular Restaurants";
+
+  String get for_you => "For You";
+
+  //Express
+  String get welcome_to_Express => "Welcome To Express";
+  String get deliver_to => "Deliver to?";
+  String get get_your_item_delivered => "Get your item delivered,";
+  String get whenever_wherever => "whenever,wherever,";
+  String get sell_with => "Sell with Grab Shop";
+  String get a_simpler_way => "A simpler way to sell online, commission-free!";
+  String get build_catalogue => "Build catalogue";
+  String get quick_guide => "Quick guide";
+  String get you_may_like => "You may like";
+  String get royal_bodhitree => "Royal Bodhitree Development";
+  String get current => "Current";
+  String get past => "Past";
+  String get watch_this => "Watch this space! More challenges are coming soon.";
+  String get your_challenges =>
+      "Your challenges appear here after they're done.";
 }
 
 class Khmer extends Language {
@@ -96,7 +171,7 @@ class Khmer extends Language {
   String get express => "ឆាប់រហ័ស";
   String get remorque => "ឡានទាញ";
   String get rent => "ជួល";
-  String get rewards => "ពរជ័យ";
+  String get rewards => "រង្វាន់";
   String get car => "រថយន្ត";
   String get gifts => "អំណោយ";
   String get hotels => "សណ្ឋាគារ";
@@ -132,6 +207,11 @@ class Khmer extends Language {
   String get map_your_city => "ផែនទីទីក្រុងរបស់អ្នក";
   String get support_the_environment => "គាំទ្របរិស្ថាន";
   String get drive_with_grab => "ធ្វើដំណើរជាមួយ Grab";
+  String get grab_thumbs => "⭐Grab មេដៃផ្កាយក្នុងតំបន់⭐";
+  String get special_deals => "🎁ការផ្ដល់អោយពិសេស🎁";
+  String get massive_saving => "💲ការសន្សំដ៏ធំ💲";
+  String get keep_discovering => "បន្តរការរុករក";
+
   String get messages => "សារ"; //message_screen
   String get chats => "ការជជែក";
   String get notifications => "ការជូនដំណឹង";
@@ -175,7 +255,79 @@ class Khmer extends Language {
       "ឆ្លងកាត់ភាពតានតឹងនៅនាទីចុងក្រោយ";
   String get caption => "ចំណងជើង";
   String get subcaption => "ចំណងជើងរង";
+  String get my_rewards => "រង្វាន់របស់ខ្ញុំ";
+  String get my_membership_etials => "ព័ត៌មានលម្អិតអំពីសមាជិកភាពរបស់ខ្ញុំ";
+  String get limited_edition => "ការបោះពុម្ពមានកំណត់";
+  String get travel => "ការធ្វើដំណើរ";
+  String get service => "សេវាកម្ម";
+  String get shopping => "ការដើរទិញឥវ៉ាន់";
+  String get dinner => "អាហារពេលល្ងាច";
+  String get enterainment => "ការកំសាន្ត";
+  String get sell_all => "លក់ទាំងអស់";
+  //rent screen
+  String get Rent_a_vehicle => "ជួលយានយន្ត,ជួលអ្នកបើកបរ";
+  String get visit_multiple =>
+      "ទស្សនាកន្លែងជាច្រើនឬចូលរួមព្រឹត្តិការណ៍នានានៅក្នុងទីក្រុង។";
+  String get current_location => "ទីតាំងបច្ចុប្បន្ន";
+  String get how_long => "តើរយៈពេលប៉ុន្មាន?";
+  String get find_out_more => "ស្វែងយល់បន្ថែម";
+  //payment screen
+  String get recent_transaction => "ប្រតិបត្តិការថ្មីៗ";
+  String get There_is_no => "មិនមានសកម្មភាពថ្មីៗដើម្បីបង្ហាញនៅទីនេះទេ។";
+  String get see_past_transactions => "មើលប្រតិបត្តិការកន្លងទៅ";
+  String get add_card => "បន្ថែមកាត";
+  String get go_cashless => "ដំណើរការដោយគ្មានប្រាក់ជាមួយកាតឥណទានឬឥណពន្ធ";
+  String get simple_flexible =>
+      "ការទូទាត់ប្រាក់ប្រចាំថ្ងៃដែលអាចបត់បែនបានសាមញ្ញ";
+  //Activity screen
+  String get history => "ប្រវត្តិ";
+  String get nothing_happening_now => "មិនមានអ្វីកើតឡើងទេឥឡូវនេះ";
+  String get when_you => "នៅពេលអ្នកប្រើសេវាកម្មរបស់យើងអ្នកនឹងឃើញពួកវានៅទីនេះ";
+  //Hotel screen
+  String get hotel => "សណ្ឋាគារ";
+  String get thousands_of_hotels => "សណ្ឋាគាររាប់ពាន់";
+  String get to_choose_from => "សម្រាប់ជ្រើសរើស";
+  String get book_a_stay => "កក់ថ្ងៃនេះ,";
+  String get wherever => "ពេលណាដែល";
+  String get you_fancy => "អ្នកពេញចិត្ត";
+  String get Book_your => "កក់សណ្ឋាគារឥឡូវនេះ";
+  String get best_price => "តម្លៃល្អបំផុតសម្រាប់សណ្ឋាគារ 2+ លាន";
+  String get save_Big => "រក្សាទុកនៅលើសណ្ឋាគារនិងច្រើនទូទាំងពិភពលោក";
 
+  //Your Gifts screen
+  String get your_gifts => "អំណោយរបស់អ្នក";
+  String get redeem => "ផ្ដូររង្វាន់";
+  String get have_GrabGifts => "មានរង្ង្វន់ដើម្បីប្ដូរ?";
+  String get enter_your =>
+      "បញ្ចូលលេខកូដរង្វន់របស់អ្នកដើម្បីទទួលបានការភ្ញាក់ផ្អើល!";
+  String get no_gifts_sent => "គ្មានរង្ង្វន់ដែលបានផ្ញើឬប្ដូរកាលពីពេលថ្មីៗនេះទេ";
+  String get DELIVER_TO => "ដឺកទៅ";
+  String get delivery => "ដឺក";
+  String get self_Pick_Up => "យកដោយខ្លួនឯង";
+  String get fast_delivery => "ការដឹកជញ្ជូនលឿន ";
+  String get popular_restaurants => "ភោជនីយដ្ឋានពេញនិយម";
+
+  String get for_you => "សម្រាប់អ្នក";
+
+  //Express
+  String get welcome_to_Express => "សូមស្វាគមន៍មកកាន់ Express";
+  String get deliver_to => "ដឹកជញ្ជូនដល់?";
+  String get get_your_item_delivered => "ទំនិញ​របស់​អ្នក​ត្រូវ​បាន​បញ្ជូន​,";
+  String get whenever_wherever => "គ្រប់ពេលវេលា, គ្រប់ទីកន្លែង,";
+  String get sell_with => "លក់ជាមួយ ហាងGrab ";
+  String get a_simpler_way =>
+      "វិធីសាមញ្ញក្នុងការលក់អនឡាញ ដោយមិនគិតកម្រៃជើងសារ!";
+  String get build_catalogue => "បង្កើតកាតាឡុក";
+  String get quick_guide => "ការណែនាំរហ័ស";
+  String get you_may_like => "អ្នកប្រហែលជាចូលចិត្ត";
+  String get royal_bodhitree => "រាជ បូទិត្យ អភិវឌ្ឍន៍";
+
+  String get current => "បច្ចុប្បន្ន";
+  String get past => "អតីតកាល";
+  String get watch_this =>
+      "មើលកន្លែងនេះ!បញ្ហាប្រឈមជាច្រើនទៀតនឹងមកដល់ក្នុងពេលឆាប់ៗនេះ។";
+  String get your_challenges =>
+      "បញ្ហាប្រឈមរបស់អ្នកបង្ហាញនៅទីនេះ បន្ទាប់ពីពួកគេរួចរាល់។";
 }
 
 class Chinese extends Language {
@@ -238,6 +390,11 @@ class Chinese extends Language {
   String get ad_meiMei_fresh_fruit_and_juicy => "广告·MeiMei新鲜水果和多汁...";
   String get prepare_the_turkey => "准备火鸡。";
   String get grabFood_delivery_only => "仅限 GrabFood 配送...";
+  String get grab_thumbs => "⭐Grab竖起当地星星⭐";
+  String get special_deals => "🎁特别优惠🎁";
+  String get massive_saving => "💲大量节省💲";
+  String get keep_discovering => "继续发现";
+
   String get Where_to => "去哪儿？"; //transport_screen
   String get now => "现在";
   String get transport => "运输";
@@ -257,4 +414,72 @@ class Chinese extends Language {
   String get breeze_past_last_minute_stress => "轻松应对最后一刻的压力";
   String get caption => "标题";
   String get subcaption => "副标题";
+  String get my_rewards => "我的奖励";
+  String get my_membership_etials => "我的会员详情";
+  String get limited_edition => "限量版";
+  String get travel => "旅行";
+  String get service => "服务";
+  String get shopping => "购物";
+  String get dinner => "晚餐";
+  String get enterainment => "娱乐";
+  String get sell_all => "全部卖出";
+  //rent screen
+  String get rent_a_car => "租车";
+  String get visit_multiple => "参观多个地方或参加城市活动";
+  String get current_location => "当前位置";
+  String get how_long => "多长时间？";
+  String get find_out_more => "了解更多";
+  //payment screen
+  String get recent_transaction => "最近的交易";
+  String get There_is_no => "最近没有活动可以显示。";
+  String get see_past_transactions => "参见过去的交易";
+  String get add_card => "添加卡";
+  String get go_cashless => "使用信用卡或借记卡进行无现金";
+  String get simple_flexible => "简单灵活的日常付款";
+  //Activity screen
+  String get history => "历史";
+  String get nothing_happening_now => "现在什么都没发生";
+  String get when_you => "当您使用我们的服务时，您会在这里看到它们";
+  //Hotel screen
+  String get hotel => "酒店";
+  String get thousands_of_hotels => "成千上万的酒店";
+  String get to_choose_from => "选择";
+  String get book_a_stay => "今天预订住宿，";
+  String get wherever => "无论何处";
+  String get you_fancy => "你喜欢";
+  String get Book_your => "立即预订您的酒店";
+  String get best_price => "200百万酒店的最佳价格";
+  String get save_Big => "在全球范围内节省大量酒店和更多的全球。";
+
+  //Your Gifts screen
+  String get your_gifts => "你的礼物";
+  String get redeem => "赎回";
+  String get have_GrabGifts => "有要兑换的抢g吗?";
+  String get enter_your => "输入您的礼品代码以查看您的惊喜！";
+  String get no_gifts_sent => "最近没有发送或赎回的礼物";
+  String get DELIVER_TO => "交付";
+  String get delivery => "交货";
+  String get self_Pick_Up => "自我接";
+  String get fast_delivery => "快速交货";
+  String get popular_restaurants => "受欢迎的餐厅";
+
+  String get for_you => "为你";
+
+  //Express
+  String get welcome_to_Express => "欢迎来到快递";
+  String get deliver_to => "送货到？";
+  String get get_your_item_delivered => "让您的商品送达，";
+  String get whenever_wherever => "无论何时何地，";
+  String get sell_with => "通过 Grab Shop 销售";
+  String get a_simpler_way => "一种更简单的网上销售方式，免佣金！";
+  String get build_catalogue => "建立目录";
+  String get quick_guide => "快速指南";
+  String get you_may_like => "你可能喜欢";
+  String get royal_bodhitree => "皇家菩提树发展公司";
+
+  String get current => "当前的";
+  String get past => "过去的";
+  String get watch_this => "敬请关注！更多挑战即将到来。";
+  String get your_challenges =>
+      "您的挑战完成后就会出现在这里。";
 }

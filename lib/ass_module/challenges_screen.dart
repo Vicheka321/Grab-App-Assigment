@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'langauge_data.dart';
+import 'langauge_logic.dart';
 
 class ChallengesScreen extends StatefulWidget {
   const ChallengesScreen({super.key});
@@ -8,6 +12,8 @@ class ChallengesScreen extends StatefulWidget {
 }
 
 class _ChallengesScreenState extends State<ChallengesScreen> {
+  Language _language = Khmer();
+  int _langIndex = 0;
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -20,6 +26,8 @@ class _ChallengesScreenState extends State<ChallengesScreen> {
   }
 
   AppBar _buildAppBar() {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     return AppBar(
       leading: IconButton(
         icon: const Icon(Icons.close),
@@ -28,14 +36,14 @@ class _ChallengesScreenState extends State<ChallengesScreen> {
           Navigator.pop(context);
         },
       ),
-      title: const Text("Challenges"),
-      bottom: const TabBar(
+      title:  Text(_language.challenges),
+      bottom: TabBar(
         indicatorColor: Colors.green,
         labelColor: Colors.green,
         unselectedLabelColor: Colors.grey,
         tabs: [
-          Tab(text: "Current"),
-          Tab(text: "Past"),
+          Tab(text: _language.current),
+          Tab(text: _language.past),
         ],
       ),
     );
@@ -56,8 +64,8 @@ class _ChallengesScreenState extends State<ChallengesScreen> {
                 ),
               ),
               const SizedBox(height: 20),
-              const Text(
-                "Watch this space! More challenges are coming soon.",
+              Text(
+                _language.watch_this,
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.grey,
@@ -82,8 +90,8 @@ class _ChallengesScreenState extends State<ChallengesScreen> {
                 ),
               ),
               const SizedBox(height: 20),
-              const Text(
-                "Your challenges appear here after they're done.",
+              Text(
+                _language.your_challenges,
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w400,
