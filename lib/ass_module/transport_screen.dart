@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'langauge_data.dart';
+import 'langauge_logic.dart';
 
 class TransportScreen extends StatefulWidget {
-  const TransportScreen({super.key});
+  // const TransportScreen({super.key});
 
   @override
   State<TransportScreen> createState() => _TransportScreenState();
 }
 
 class _TransportScreenState extends State<TransportScreen> {
+  Language _language = Khmer();
+  int _langIndex = 0;
+  
   @override
   Widget build(BuildContext context) {
+  _language = context.watch<LanguageLogic>().language;
+  _langIndex = context.watch<LanguageLogic>().langIndex;
+
     return Scaffold(
       body: _buildBody(),
     );
@@ -29,6 +38,8 @@ class _TransportScreenState extends State<TransportScreen> {
   }
 
   Widget _buildSearch() {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     return Stack(
       clipBehavior: Clip.none,
       children: [
@@ -60,7 +71,7 @@ class _TransportScreenState extends State<TransportScreen> {
                       ),
                     ],
                   ),
-                  child: const Row(
+                  child:  Row(
                     children: [
                       Icon(
                         Icons.where_to_vote,
@@ -68,10 +79,7 @@ class _TransportScreenState extends State<TransportScreen> {
                       ),
                       SizedBox(width: 8),
                       Text(
-                        'Where to?',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontFamily: 'Siem Reap',
+                        _language.Where_to,style: TextStyle(fontFamily: 'siem reab',fontSize: 16
                         ),
                       ),
                     ],
@@ -90,19 +98,16 @@ class _TransportScreenState extends State<TransportScreen> {
                     left: BorderSide(width: 0.5),
                   ),
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.all(8.0),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Now",
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontFamily: 'Siem Reap',
+                        _language.now,style: TextStyle(fontFamily: 'siem reab',fontSize: 16,
                         ),
                       ),
-                      Icon(
+                      const Icon(
                         Icons.arrow_drop_down_sharp,
                       ),
                     ],
@@ -117,6 +122,8 @@ class _TransportScreenState extends State<TransportScreen> {
   }
 
   Widget _buildHeader() {
+  _language = context.watch<LanguageLogic>().language;
+  _langIndex = context.watch<LanguageLogic>().langIndex;
     return Column(
       children: [
         Container(
@@ -150,12 +157,12 @@ class _TransportScreenState extends State<TransportScreen> {
                       ),
                     ),
                     const SizedBox(width: 8),
-                    const Text(
-                      'Transport',
+                    Text(
+                      _language.transport,
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        fontFamily: 'Siem Reap',
+                        fontFamily: 'Siem Reab',
                       ),
                     ),
                     const Spacer(),
@@ -168,18 +175,18 @@ class _TransportScreenState extends State<TransportScreen> {
                           color: Colors.white10,
                           borderRadius: BorderRadius.circular(24),
                         ),
-                        child: const Row(
+                        child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(Icons.map, color: Colors.black),
-                            SizedBox(width: 5),
+                            const Icon(Icons.map, color: Colors.black),
+                            const SizedBox(width: 5),
                             Text(
-                              "Map",
-                              style: TextStyle(
+                              _language.map,
+                              style: const TextStyle(
                                 color: Colors.black,
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
-                                fontFamily: 'Siem Reap',
+                                fontFamily: 'Siem Reab',
                               ),
                             ),
                           ],
@@ -201,13 +208,10 @@ class _TransportScreenState extends State<TransportScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Expanded(
+                        Expanded(
                           flex: 3,
                           child: Text(
-                            "Wherever you're going, let's get you there!",
-                            style: TextStyle(
-                              fontSize: 14,
-                              fontFamily: 'Siem Reap',
+                            _language.Wherever_you_are_going_let_is_get_you_there,style: TextStyle(fontFamily: 'siem reab',fontSize: 14
                             ),
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
@@ -238,29 +242,31 @@ class _TransportScreenState extends State<TransportScreen> {
   }
 
   Widget _buildlistview() {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     return SizedBox(
       height: 240,
       child: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 16),
-        children: const [
+        children: [
           ListTile(
-            leading: Icon(
+            leading: const Icon(
               Icons.location_on,
               color: Color(0xFF6ACD9F),
             ),
-            title: Text("Aeon Mall Phnom Penh"),
+            title: Text(_language.aeon_mall_phnom_penh,style: TextStyle(fontFamily: 'siem reab')),
             subtitle:
-                Text("Samdach Sothearos Boulevard 3, Tonle Bassac, Cambodia"),
+                const Text("Samdach Sothearos Boulevard 3, Tonle Bassac, Cambodia"),
           ),
           ListTile(
-            leading: Icon(
+            leading: const Icon(
               Icons.location_on,
               color: Color(0xFF6ACD9F),
             ),
-            title: Text("Pizza 4P's Phnom Penh"),
-            subtitle: Text("Sisowath Quay, Chey Chumneas, Daun Penh, Cambodia"),
+            title: Text(_language.pizza_4Ps_phnom_penh,style: const TextStyle(fontFamily: 'siem reab')),
+            subtitle: const Text("Sisowath Quay, Chey Chumneas, Daun Penh, Cambodia"),
           ),
-          ListTile(
+          const ListTile(
             leading: Icon(
               Icons.location_on,
               color: Color(0xFF6ACD9F),
@@ -275,6 +281,8 @@ class _TransportScreenState extends State<TransportScreen> {
   }
 
   Widget _buildGridView() {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     bool islightMode = Theme.of(context).brightness == Brightness.light;
     return Padding(
       padding: const EdgeInsets.all(16.0),
@@ -282,10 +290,10 @@ class _TransportScreenState extends State<TransportScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Rides for your every need",
+            _language.rides_for_your_every_need,
             style: TextStyle(
               fontSize: 18,
-              fontFamily: 'Siem Reap',
+              fontFamily: 'Siem Reab',
             ),
           ),
           GridView(
@@ -310,20 +318,20 @@ class _TransportScreenState extends State<TransportScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "GoNow",
+                        _language.gonow,
                         style: TextStyle(
                             fontSize: 16,
-                            fontFamily: 'Siem Reap',
+                            fontFamily: 'Siem Reab',
                             color: islightMode ? Colors.white : Colors.black),
                       ),
                       SizedBox(
                         height: 8,
                       ),
                       Text(
-                        "No drop-off required",
+                        _language.No_drop_off_required,
                         style: TextStyle(
                             fontSize: 14,
-                            fontFamily: 'Siem Reap',
+                            fontFamily: 'Siem Reab',
                             color: islightMode ? Colors.white : Colors.black),
                       )
                     ],
@@ -342,10 +350,10 @@ class _TransportScreenState extends State<TransportScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Advance Booking",
+                        _language.advance_booking,
                         style: TextStyle(
                             fontSize: 16,
-                            fontFamily: 'Siem Reap',
+                            fontFamily: 'Siem Reab',
                             color: islightMode ? Colors.white : Colors.black),
                       ),
                     ],
@@ -364,10 +372,10 @@ class _TransportScreenState extends State<TransportScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Rent by the hour",
+                        _language.rent_by_the_hour,
                         style: TextStyle(
                             fontSize: 16,
-                            fontFamily: 'Siem Reap',
+                            fontFamily: 'Siem Reab',
                             color: islightMode ? Colors.white : Colors.black),
                       ),
                     ],
@@ -382,6 +390,8 @@ class _TransportScreenState extends State<TransportScreen> {
   }
 
   Widget _buildListslideshow() {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     bool islightMode = Theme.of(context).brightness == Brightness.light;
 
     final slides = [
@@ -403,10 +413,10 @@ class _TransportScreenState extends State<TransportScreen> {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(
-            "Travel Abroad",
+            _language.travel_abroad,
             style: TextStyle(
               fontSize: 18,
-              fontFamily: 'Siem Reap',
+              fontFamily: 'Siem Reab',
               color: islightMode ? Colors.black : Colors.white,
             ),
           ),

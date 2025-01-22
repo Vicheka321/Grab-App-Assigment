@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'langauge_data.dart';
+import 'langauge_logic.dart';
+
 
 class MessagesScreen extends StatefulWidget {
   const MessagesScreen({super.key});
@@ -8,13 +13,17 @@ class MessagesScreen extends StatefulWidget {
 }
 
 class _MessagesScreenState extends State<MessagesScreen> {
+  Language _language = Khmer();
+  int _langIndex = 0;
   bool isFirstButtonSelected = true;
   @override
   Widget build(BuildContext context) {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Messages',
+        title:  Text(
+          _language.messages,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             // color: Colors.black,
@@ -28,7 +37,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
           _buildSwitchBar(),
           Expanded(
             child: isFirstButtonSelected
-                ? const ChatsPage() // Show ChatsPage when first button is selected
+                ? ChatsPage() // Show ChatsPage when first button is selected
                 : NotificationsPage(), // Show NotificationsPage when second button is selected
           ),
         ],
@@ -61,7 +70,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
               ),
               child: Center(
                 child: Text(
-                  'Chats',
+                  _language.chats,
                   style: TextStyle(
                     color: isFirstButtonSelected ? Colors.white : Colors.black,
                     fontWeight: FontWeight.bold,
@@ -93,7 +102,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
               ),
               child: Center(
                 child: Text(
-                  'Notifications',
+                  _language.notifications,
                   style: TextStyle(
                     color: !isFirstButtonSelected ? Colors.white : Colors.black,
                     fontWeight: FontWeight.bold,
@@ -112,10 +121,14 @@ class _MessagesScreenState extends State<MessagesScreen> {
 
 // Example Pages
 class ChatsPage extends StatelessWidget {
-  const ChatsPage({super.key});
+  Language _language = Khmer();
+  int _langIndex = 0;
+  // const ChatsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     return Padding(
       padding: const EdgeInsets.only(top: 170),
       child: Center(
@@ -127,8 +140,8 @@ class ChatsPage extends StatelessWidget {
               height: 300,
             ),
             const SizedBox(width: 10),
-            const Text(
-              'Find your chats with our support',
+            Text(
+              _language.find_your_chats_with_our_support,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
@@ -136,9 +149,9 @@ class ChatsPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              'Specialists here!',
-              style: TextStyle(
+            Text(
+              _language.specialists_here,
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
                 // color: Colors.black,
@@ -146,8 +159,8 @@ class ChatsPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 18),
-            const Text(
-              'You can also get help from them via our',
+            Text(
+              _language.you_can_also_get_help_from_them_via_our,
               style: TextStyle(
                 // fontWeight: FontWeight.bold,
                 fontSize: 12
@@ -162,6 +175,10 @@ class ChatsPage extends StatelessWidget {
 }
 
 class NotificationsPage extends StatelessWidget {
+  Language _language = Khmer();
+  int _langIndex = 0;
+  
+
   final List<MessageModel> messages = [
     MessageModel(
       title: 'Satisfy cravings easily today',
@@ -171,8 +188,8 @@ class NotificationsPage extends StatelessWidget {
       isUnread: true,
     ),
     MessageModel(
-      title: '📢 ប្រូម៉ូសិននៅតែបន្ត រហូតដល់...',
-      subtitle: 'បញ្ចុះ 60% ⚡ គ្រាម MORNING សម្រាប់...',
+      title: '📢 បញ្ចុះ 60% ⚡ គ្រាម MORNING សម្រាប់...',
+      subtitle: '60% off ⚡ MORNING for...',
       date: '30 Dec',
       icon: Icons.local_offer,
       isUnread: true,
@@ -193,7 +210,7 @@ class NotificationsPage extends StatelessWidget {
     ),
     MessageModel(
       title: 'រៀបចំហ្មតួក',
-      subtitle: 'ដឹកជញ្ចូន GrabFood ត្រឹម 25 Dec...',
+      subtitle: 'ដឹកជញ្ចូន GrabFood ត្រឹម ...',
       date: '25 Dec',
       icon: Icons.local_offer,
       isUnread: true,
@@ -204,6 +221,8 @@ class NotificationsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    _language = context.watch<LanguageLogic>().language;
+    _langIndex = context.watch<LanguageLogic>().langIndex;
     return Padding(
       padding: const EdgeInsets.only(top: 20),
       child: Scaffold(
