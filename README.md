@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+# Grab-App-Assigment
+=======
+<<<<<<< HEAD
 # grab_app
 
 A new Flutter project.
@@ -18,3 +21,4 @@ samples, guidance on mobile development, and a full API reference.
 =======
 # Grab-App
 >>>>>>> 4f5fd89751c5dd98afa259ced85fee69ee01f2c6
+>>>>>>> master
