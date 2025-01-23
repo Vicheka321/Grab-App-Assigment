@@ -35,6 +35,15 @@ class GrabLoginScreen extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
+                        const SizedBox(height: 6),
+            const Text(
+              'Click Sign in to Main Screen',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.red,
+              ),
+            ),
             const SizedBox(height: 20),
             TextField(
               controller: emailController,
@@ -57,7 +66,7 @@ class GrabLoginScreen extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: GestureDetector(
                 onTap: () {
-                  // Add forgot password logic
+
                 },
                 child: const Text(
                   'Forgot your password?',
@@ -69,38 +78,45 @@ class GrabLoginScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            // Sign In Button
             ElevatedButton(
               onPressed: () {
-                if (emailController.text == 'vicheka@gmail.com' &&
-                    passwordController.text == '123') {
-                  Navigator.push(
+                // if (emailController.text == 'vicheka@gmail.com' &&
+                //     passwordController.text == '123') {
+                //   Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //       builder: (context) => const MainScreen(),
+                //     ),
+                //   );
+                // } else {
+                //   showDialog(
+                //     context: context,
+                //     builder: (context) => AlertDialog(
+                //       title: const Text('Error'),
+                //       content: const Text('Invalid email or password.'),
+                //       actions: [
+                //         TextButton(
+                //           onPressed: () => Navigator.pop(context),
+                //           child: const Text('OK'),
+                //         ),
+                //       ],
+                //     ),
+                //   );
+                // }
+
+
+                Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => const MainScreen(),
                     ),
                   );
-                } else {
-                  showDialog(
-                    context: context,
-                    builder: (context) => AlertDialog(
-                      title: const Text('Error'),
-                      content: const Text('Invalid email or password.'),
-                      actions: [
-                        TextButton(
-                          onPressed: () => Navigator.pop(context),
-                          child: const Text('OK'),
-                        ),
-                      ],
-                    ),
-                  );
-                }
               },
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(double.infinity, 50),
                 backgroundColor: Colors.blue,
               ),
-              child: const Text('Sign in'),
+              child: const Text('Sign in',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
             ),
             const SizedBox(height: 20),
             // Sign Up Text

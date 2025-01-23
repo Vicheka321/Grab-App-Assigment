@@ -178,7 +178,7 @@ class Khmer extends Language {
   String get gonow => "ចេញទៅឥឡូវ";
   String get all => "ទាំងអស់";
   String get express => "ឆាប់រហ័ស";
-  String get remorque => "ឡានទាញ";
+  String get remorque => "ម៉ូតូកង់បី";
   String get rent => "ជួល";
   String get rewards => "រង្វាន់";
   String get car => "រថយន្ត";
@@ -207,7 +207,7 @@ class Khmer extends Language {
   String get setting => "ការកំណត់";
   String get safety_setting => "ការកំណត់សុវត្ថិភាព";
   String get langauge => "Language";
-  String get theme_mode => "រចនាម៉ូដ";
+  String get theme_mode => "ប្ដូរពន្លឹ";
   String get saved_places => "កន្លែងរក្សាទុក";
   String get help_centre => "មជ្ឈមណ្ឌលជំនួយ";
   String get share_feedback => "ចែករំលែកមតិកែលម្អ";

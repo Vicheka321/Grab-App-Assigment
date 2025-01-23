@@ -8,6 +8,7 @@ import 'package:grab_app/ass_module/rewards_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'Hotel_screen.dart';
+import 'about_us_screen.dart';
 import 'food_screen.dart';
 import 'gifts_screen.dart';
 import 'image_list.dart';
@@ -736,29 +737,37 @@ class _HomeScreenState extends State<HomeScreen> {
     _language = context.watch<LanguageLogic>().language;
     _langIndex = context.watch<LanguageLogic>().langIndex;
     bool islightMode = Theme.of(context).brightness == Brightness.light;
-    return Container(
-      color: islightMode ? Colors.white : Colors.black12,
-      child: Padding(
-        padding: EdgeInsets.only(
-          top: 0.r,
-          bottom: 0.r,
-          left: 14.r,
-          right: 14.r,
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              _language.grab_thumbs,
-              style: TextStyle(
-                  fontSize: 20.sp, //==============================
-                  color: islightMode ? Colors.black : Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'siem reab'),
-            ),
-            _buildGridViewGrabThumbsUpLocalStars(),
-          ],
+    return GestureDetector(
+      onTap: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => AboutUsScreen()),
+      );
+      },
+      child: Container(
+        color: islightMode ? Colors.white : Colors.black12,
+        child: Padding(
+          padding: EdgeInsets.only(
+            top: 0.r,
+            bottom: 0.r,
+            left: 14.r,
+            right: 14.r,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                _language.grab_thumbs,
+                style: TextStyle(
+                    fontSize: 20.sp, //==============================
+                    color: islightMode ? Colors.black : Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'siem reab'),
+              ),
+              _buildGridViewGrabThumbsUpLocalStars(),
+            ],
+          ),
         ),
       ),
     );
@@ -817,29 +826,37 @@ class _HomeScreenState extends State<HomeScreen> {
     _language = context.watch<LanguageLogic>().language;
     _langIndex = context.watch<LanguageLogic>().langIndex;
     bool islightMode = Theme.of(context).brightness == Brightness.light;
-    return Container(
-      color: islightMode ? Colors.white : Colors.black12,
-      child: Padding(
-        padding: EdgeInsets.only(
-          top: 0,
-          bottom: 0,
-          left: 14.r,
-          right: 14.r,
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              _language.special_deals,
-              style: TextStyle(
-                  fontSize: 20.r,
-                  color: islightMode ? Colors.black : Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'siem reab'),
-            ),
-            _buildGridViewSpecialDeals(),
-          ],
+    return GestureDetector(
+      onTap: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => AboutUsScreen()),
+      );
+      },
+      child: Container(
+        color: islightMode ? Colors.white : Colors.black12,
+        child: Padding(
+          padding: EdgeInsets.only(
+            top: 0,
+            bottom: 0,
+            left: 14.r,
+            right: 14.r,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                _language.special_deals,
+                style: TextStyle(
+                    fontSize: 20.r,
+                    color: islightMode ? Colors.black : Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'siem reab'),
+              ),
+              _buildGridViewSpecialDeals(),
+            ],
+          ),
         ),
       ),
     );
@@ -899,29 +916,37 @@ class _HomeScreenState extends State<HomeScreen> {
     _language = context.watch<LanguageLogic>().language;
     _langIndex = context.watch<LanguageLogic>().langIndex;
     bool islightMode = Theme.of(context).brightness == Brightness.light;
-    return Container(
-      color: islightMode ? Colors.white : Colors.black12,
-      child: Padding(
-        padding: EdgeInsets.only(
-          top: 0,
-          bottom: 0,
-          left: 14.r,
-          right: 14.r,
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              _language.massive_saving,
-              style: TextStyle(
-                  fontSize: 20.sp,
-                  color: islightMode ? Colors.black : Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'siem reab'),
-            ),
-            _buildGridViewMassiveSavings(),
-          ],
+    return GestureDetector(
+      onTap: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => AboutUsScreen()),
+      );
+      },
+      child: Container(
+        color: islightMode ? Colors.white : Colors.black12,
+        child: Padding(
+          padding: EdgeInsets.only(
+            top: 0,
+            bottom: 0,
+            left: 14.r,
+            right: 14.r,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                _language.massive_saving,
+                style: TextStyle(
+                    fontSize: 20.sp,
+                    color: islightMode ? Colors.black : Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'siem reab'),
+              ),
+              _buildGridViewMassiveSavings(),
+            ],
+          ),
         ),
       ),
     );
@@ -981,29 +1006,37 @@ class _HomeScreenState extends State<HomeScreen> {
     _language = context.watch<LanguageLogic>().language;
     _langIndex = context.watch<LanguageLogic>().langIndex;
     bool islightMode = Theme.of(context).brightness == Brightness.light;
-    return Container(
-      color: islightMode ? Colors.white : Colors.black12,
-      child: Padding(
-        padding: EdgeInsets.only(
-          top: 0,
-          bottom: 0,
-          left: 14.r,
-          right: 14.r,
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              _language.keep_discovering,
-              style: TextStyle(
-                  fontSize: 20.sp,
-                  color: islightMode ? Colors.black : Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'siem reab'),
-            ),
-            _buildGridViewKeepDiscovering(),
-          ],
+    return GestureDetector(
+      onTap: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => AboutUsScreen()),
+      );
+      },
+      child: Container(
+        color: islightMode ? Colors.white : Colors.black12,
+        child: Padding(
+          padding: EdgeInsets.only(
+            top: 0,
+            bottom: 0,
+            left: 14.r,
+            right: 14.r,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                _language.keep_discovering,
+                style: TextStyle(
+                    fontSize: 20.sp,
+                    color: islightMode ? Colors.black : Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'siem reab'),
+              ),
+              _buildGridViewKeepDiscovering(),
+            ],
+          ),
         ),
       ),
     );
