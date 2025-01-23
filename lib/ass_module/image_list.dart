@@ -200,7 +200,7 @@ List<Map<String, dynamic>> imageListfoodvertical = [
   {
     'image': 'images/food/logo4.jpg',
     'text': 'គ្រួសារបបរ',
-    'rateandtype': '⭐ 4.4 Porrridge| អាហារ',
+    'rateandtype': '⭐ 4.6 Porrridge| អាហារ',
     'delivery': 'Free Delivery',
     'distance': 'From 20 mins',
     'relatedImages': [
@@ -213,7 +213,7 @@ List<Map<String, dynamic>> imageListfoodvertical = [
   {
     'image': 'images/food6.jpg',
     'text': 'ស្ងោម្រះ',
-    'rateandtype': '⭐ 4.5 Food | អាហារ',
+    'rateandtype': '⭐ 4.9 Food | អាហារ',
     'delivery': 'Free Delivery',
     'distance': 'From 15 mins',
     'relatedImages': [
@@ -225,7 +225,7 @@ List<Map<String, dynamic>> imageListfoodvertical = [
     {
     'image': 'images/food/logo1.jpg',
     'text': 'ស្រី​ អូនបុងល្ហុងឆ្ងាញ់ពេញចិត្ត',
-    'rateandtype': '⭐️ 4.6 Food | អាហារ',
+    'rateandtype': '⭐️ 4.8 Food | អាហារ',
     'delivery': 'Free Delivery',
     'distance': 'From 30 mins',
     'relatedImages': [
@@ -270,7 +270,7 @@ List<Map<String, dynamic>> imageListfoodvertical = [
   {
     'image': 'images/food/logo9.jpg',
     'text': 'Cozy Tea',
-    'rateandtype': '⭐️ 4.2 Milk Tea | តែទឹកដោះគោ',
+    'rateandtype': '⭐️ 4.1 Milk Tea | តែទឹកដោះគោ',
     'delivery': 'Paid Delivery 2.0\$',
     'distance': 'From 35 mins',
     'relatedImages': [
@@ -285,7 +285,7 @@ List<Map<String, dynamic>> imageListfoodvertical = [
  {
     'image': 'images/food/logo10.jpg',
     'text': 'Nom Banh Chok ',
-    'rateandtype': '⭐️ 4.5 Food | អាហារ',
+    'rateandtype': '⭐️ 5 Food | អាហារ',
     'delivery': 'Free Delivery ',
     'distance': 'From 25 mins',
     'relatedImages': [
@@ -341,7 +341,7 @@ List<Map<String, dynamic>> imageListfoodvertical = [
   {
     'image': 'images/food/logo14.jpg',
     'text': 'Mee Hel - មីហឹរ',
-    'rateandtype': '⭐️ 4.2 Food | អាហារ',
+    'rateandtype': '⭐️ 4.3 Food | អាហារ',
     'delivery': 'Paid Delivery 2\$ ',
     'distance': 'From 20 mins',
     'relatedImages': [
@@ -372,7 +372,7 @@ List<Map<String, dynamic>> imageListfoodvertical = [
   {
     'image': 'images/food/logo16.jpg',
     'text': 'ស្រីមុំ​ បង្អែមខ្មែរ',
-    'rateandtype': '⭐️ 4.4 Food | អាហារ',
+    'rateandtype': '⭐️ 4.6 Food | អាហារ',
     'delivery': 'Free Delivery ',
     'distance': 'From 30 mins',
     'relatedImages': [
@@ -389,7 +389,7 @@ List<Map<String, dynamic>> imageListfoodvertical = [
   {
     'image': 'images/food/logo17.jpg',
     'text': 'Cha Nang 6A - ចាណាង​ 6A',
-    'rateandtype': '⭐️ 4.4 Food | អាហារ',
+    'rateandtype': '⭐️ 4.5 Food | អាហារ',
     'delivery': 'Free Delivery ',
     'distance': 'From 15 mins',
     'relatedImages': [
@@ -414,13 +414,13 @@ List<Map<String, dynamic>> imageListfoodvertical = [
         {'image': 'images/food/Dounle Cheese Pan Pizza.jpg', 'name': 'Dounle Cheese Pan Pizza','price':'4,0000'},
         {'image': 'images/food/Double Pepperoni Crispy Thin Pizza.jpg', 'name': 'Double Pepperoni Crispy Thin Pizza','price':'20,000'},
         {'image': 'images/food/Black Pepper Wing.jpg', 'name':'Black Pepper Wing','price':'40,00'},
-         {'image':  'images/food/Crispy Crunchy Wing.jpg', 'name':'Crispy Crunchy Wing','price':'40,00'},
+         {'image': 'images/food/Crispy Crunchy Wing.jpg', 'name':'Crispy Crunchy Wing','price':'40,00'},
       ],
   },
   {
     'image': 'images/food/logo19.jpg',
     'text': 'ហាងនំបុ័ងប៉ាតេល្បីឆ្ងាញ់',
-    'rateandtype': '⭐️ 4.4 Food | អាហារ',
+    'rateandtype': '⭐️ 4.7 Food | អាហារ',
     'delivery': 'Free Delivery ',
     'distance': 'From 25 mins',
     'relatedImages': [
